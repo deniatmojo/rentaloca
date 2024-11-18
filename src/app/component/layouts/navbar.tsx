@@ -15,7 +15,7 @@ const navbar = () => {
               src="/img/rentaloca.png"
               alt="Rentaloca Logo"
               height={19.03}
-              weidth={88}
+              width={88}
             />
           </a>
         </div>
