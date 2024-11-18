@@ -10,7 +10,7 @@ const navbar = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-0.5 p-0.5">
             <span className="sr-only">Rentaloca</span>
-            <img
+            <Image
               className="h-8 w-auto"
               src="/img/rentaloca.png"
               alt="Rentaloca Logo"
