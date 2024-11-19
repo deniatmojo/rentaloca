@@ -1,6 +1,6 @@
 const bgheader = () => {
   return (
-    <div className="container bg-macaronidark3 -mt-[80px] h-[735px] max-w-7xl">
+    <div className="container bg-macaronidark3 -mt-[80px] h-[629px] max-w-7xl">
       <div
         className="h-[629px] flex items-center justify-center"
         style={{ backgroundImage: "url('/img/bgheader.png')" }}
@@ -25,7 +25,7 @@ const bgheader = () => {
             </div>
           </div>
           <div
-            className="w-[483px] h-[725px] absolute top-0 right-5 bg-cover"
+            className="w-[483px] h-[630px] absolute top-0 right-5 bg-cover"
             style={{ backgroundImage: "url('/img/home1.png')" }}
           ></div>
         </div>
