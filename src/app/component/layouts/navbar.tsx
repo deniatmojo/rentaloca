@@ -8,7 +8,7 @@ const navbar = () => {
         aria-label="Global"
       >
         {/* Logo */}
-        <div class="flex-1">
+        <div className="flex-1">
           <a href="#" className="flex ml-6">
             <span className="sr-only">Rentaloca</span>
             <Image
