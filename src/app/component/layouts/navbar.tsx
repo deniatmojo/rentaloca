@@ -8,11 +8,11 @@ const navbar = () => {
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex-1">
+        <div className="flex-1 ml-10">
           <a href="#" className="flex ml-6">
             <span className="sr-only">Rentaloca</span>
             <Image
-              className="h-8 w-auto"
+              className="h-6 w-auto"
               src="/img/rentaloca.png"
               alt="Rentaloca Logo"
               height={19.03}
@@ -22,7 +22,7 @@ const navbar = () => {
         </div>
 
         {/* Menu Tengah */}
-        <div className="mx-auto h-auto mt-4 w-auto gap-x-[10px]">
+        <div className="mx-auto h-auto mt-3 w-auto gap-x-[10px]">
           <a
             href="#"
             className="m-2.5 p-2.5 text-bold text-macaronidark hover:text-white hover:bg-macaronidark hover:px-5 hover:py-[7px] hover:rounded-full"
