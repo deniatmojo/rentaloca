@@ -1,14 +1,15 @@
 import Image from "next/image";
+
 const navbar = () => {
   return (
-    <header className="bg-white">
+    <header className="container bg-white">
       <nav
-        className="font-sansbold mx-auto flex max-w-7xl p-4 lg:px-0 border-b border-gray-200 items-center justify-between"
+        className="container relative font-Inter w-auto ml-0 mr-0 flex p-2 border-b border-gray-200 items-center justify-between"
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-0.5 p-0.5">
+        <div class="flex-1">
+          <a href="#" className="flex ml-6">
             <span className="sr-only">Rentaloca</span>
             <Image
               className="h-8 w-auto"
@@ -21,16 +22,16 @@ const navbar = () => {
         </div>
 
         {/* Menu Tengah */}
-        <div className="hidden h-auto w-auto lg:flex lg:gap-x-5">
+        <div className="mx-auto h-auto mt-3 w-auto gap-x-5">
           <a
             href="#"
-            className="m-2.5 p-2.5 text-sm font-semibold text-gray-900 hover:text-white hover:bg-red-500 hover:px-5 hover:py-2 hover:rounded-full"
+            className="m-2.5 p-2.5 text-bold text-macaronidark hover:text-white hover:bg-macaronidark hover:px-5 hover:py-2 hover:rounded-full"
           >
             Home
           </a>
           <a
             href="#"
-            className="m-2.5 p-2.5 text-sm font-semibold text-gray-900 hover:text-white hover:bg-red-500 hover:px-5 hover:py-2 hover:rounded-full"
+            className="m-2.5 p-2.5 text-bold text-macaronidark hover:text-white hover:bg-macaronidark hover:px-5 hover:py-2 hover:rounded-full"
           >
             Catalogue
           </a>
@@ -38,7 +39,7 @@ const navbar = () => {
 
         {/* Tombol Kanan */}
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-1">
+        <div className="flex flex-1 justify-end gap-x-1">
           <a
             href="#"
             className="inline-block rounded-full bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm"
