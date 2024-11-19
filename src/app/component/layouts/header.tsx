@@ -1,11 +1,10 @@
 import Navbar from "./navbar";
+import Bgheader from "./bgheader";
 const headerhome = () => {
   return (
     <main>
       <Navbar />
-      <div>
-        <h1>Hello World</h1>
-      </div>
+      <Bgheader />
     </main>
   );
 };

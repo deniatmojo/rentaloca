@@ -4,7 +4,7 @@ const navbar = () => {
   return (
     <header className="bg-white">
       <nav
-        className="container relative font-Inter max-w-7xl h-20 flex p-2 border-b border-gray-200 opacity-100 items-center justify-between"
+        className="container font-Inter max-w-7xl h-20 flex p-2 border-b-2 border-gray-200 opacity-100 items-center justify-between"
         aria-label="Global"
       >
         {/* Logo */}
