@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         macaronidark: "#3D3322",
+        macaronidark2: "#F9E9C9",
       },
     },
   },
