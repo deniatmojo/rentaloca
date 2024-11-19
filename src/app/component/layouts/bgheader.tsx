@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const bgheader = () => {
   return (
     <div className="container bg-macaronidark3 -mt-[80px] h-[735px] max-w-7xl">
