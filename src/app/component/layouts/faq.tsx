@@ -195,7 +195,7 @@ const faq = () => {
         </div>
         <div className="container w-full h-[40px] border-b border-macaronidark flex items-center justify-between">
           <h1 className="text-macaronidark font-Inter text-sm">
-            What will happen if I don't return the items on time?
+            What will happen if I don&apos;t return the items on time?
           </h1>
           <svg
             width="12"
