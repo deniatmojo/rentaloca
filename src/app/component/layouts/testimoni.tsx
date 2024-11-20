@@ -9,7 +9,7 @@ const Testimoni = () => {
       </h1>
 
       {/* Kontainer Testimoni */}
-      <div className="flex flex-row justify-center items-center gap-4 px-0 mt-8">
+      <div className="flex flex-row justify-center items-center gap-2 px-0 mt-8">
         {/* Kartu Testimoni */}
         <div className="relative w-[300px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
           {/* Lingkaran Profil */}

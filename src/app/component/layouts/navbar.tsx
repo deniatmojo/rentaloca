@@ -3,10 +3,10 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav
-      className="container relative mx-auto max-w-6xl 2xl:w-screen h-20 px-4 z-20"
+      className="container relative mx-auto lg:max-w-6xl 2xl:w-[1536px] h-20 px-4 z-20"
       aria-label="Global"
     >
-      <div className="container absolute left-7 max-w-6xl 2xl:w-screen h-full flex items-center justify-between border-b-2">
+      <div className="container lg:absolute lg:left-7 lg:max-w-[1280px] 2xl:w-[1536px] h-full flex items-center justify-between border-b-2">
         {/* Logo */}
         <div className="flex flex-shrink-0 items-center">
           <a href="#" className="flex">

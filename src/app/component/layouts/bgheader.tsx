@@ -26,7 +26,7 @@ const bgheader = () => {
               </div>
             </div>
             <div
-              className="w-[483px] h-[630px] -mt-16 bg-cover"
+              className="w-[483px] h-[630px] -mt-[68px] bg-cover"
               style={{ backgroundImage: "url('/img/home1.png')" }}
             ></div>
           </div>

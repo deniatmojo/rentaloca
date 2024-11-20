@@ -5,7 +5,7 @@ const footer = () => {
         className="w-full flex flx-row justify-center h-[360px] 2xl:w-screen"
         style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
-        <div className="container relative flex flex-row items-center justify-between w-[1280px] h[216px] gap-[100px]">
+        <div className="container relative flex flex-row mt-16 justify-between w-[1280px] h[216px] gap-[100px]">
           <div className="container flex flex-col w-[413px] h-[216px] relative mr-0">
             <a
               className="h-[42.43px] w-[197px] bg-cover mb-5"
@@ -49,7 +49,7 @@ const footer = () => {
               </a>
             </div>
           </div>
-          <div className="container h-[114px] w-[738px] flex flex-row">
+          <div className="container h-[114px] w-[738px] flex flex-row mt-16">
             <div className="w-1/4 mr-12">
               <h1 className="text-macaronidark text-xs font-Inter font-bold whitespace-nowrap">
                 PRODUCT & SERVICE
@@ -108,6 +108,11 @@ const footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative -mt-[48px] w-[1280px] mx-auto flex flx-row justify-center h-[48px]">
+        <h1 className="text-macaronidark3 text-xs font-Inter absolute bottom-0">
+          © 2024 Rentaloca Private Limited. All Rights Reserved.
+        </h1>
       </div>
     </div>
   );
