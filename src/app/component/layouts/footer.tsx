@@ -5,14 +5,14 @@ const footer = () => {
         className="w-full flex flx-row justify-center h-[360px] 2xl:w-screen"
         style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
-        <div className="container relative flex flex-row items-center justify-between w-[1280px] h[216px] gap-[149px]">
-          <div className="container flex flex-col w-[413px] h-[216px] relative mr-40">
+        <div className="container relative flex flex-row items-center justify-between w-[1280px] h[216px] gap-[100px]">
+          <div className="container flex flex-col w-[413px] h-[216px] relative mr-0">
             <a
               className="h-[42.43px] w-[197px] bg-cover mb-5"
               href="#"
               style={{ backgroundImage: "url('/img/rentaloca.png')" }}
             ></a>
-            <p className="text-sm leading-relaxed w-[413px]">
+            <p className="text-sm text-macaronidark leading-relaxed w-[413px]">
               Rentaloca Indonesia is an innovative platform revolutionizing
               fashion accessibility. We provide an easy clothing rental
               solution, allowing users to explore thousands of trendy outfit
@@ -49,60 +49,60 @@ const footer = () => {
               </a>
             </div>
           </div>
-          <div className="container h-[114px] flex flex-row justify-between gap-4">
-            <div className="w-1/4">
-              <h1 className="text-macaronidark3 text-sm font-Inter font-bold">
+          <div className="container h-[114px] w-[738px] flex flex-row">
+            <div className="w-1/4 mr-12">
+              <h1 className="text-macaronidark text-xs font-Inter font-bold whitespace-nowrap">
                 PRODUCT & SERVICE
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mt-2 mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
             </div>
             <div className="w-1/4">
-              <h2 className="text-macaronidark3 text-sm font-Inter font-bold">
+              <h2 className="text-macaronidark text-xs font-Inter font-bold">
                 COMPANY
               </h2>
-              <h1 className="text-macaronidark3 text-sm font-Inter mt-2 mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
             </div>
             <div className="w-1/4">
-              <h2 className="text-macaronidark3 text-sm font-Inter font-bold">
+              <h2 className="text-macaronidark text-xs font-Inter font-bold">
                 HELP
               </h2>
-              <h1 className="text-macaronidark3 text-sm font-Inter mt-2 mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
             </div>
             <div className="w-1/4">
-              <h2 className="text-macaronidark3 text-sm font-Inter font-bold">
+              <h2 className="text-macaronidark text-xs font-Inter font-bold">
                 CONTACT US
               </h2>
-              <h1 className="text-macaronidark3 text-sm font-Inter mt-2 mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
-              <h1 className="text-macaronidark3 text-sm font-Inter mb-2">
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 Lorem Ipsum
               </h1>
             </div>
