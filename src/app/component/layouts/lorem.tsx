@@ -11,11 +11,11 @@ const lorem = () => {
           <div className="container w-45% h-[455px]">
             <div className="relative bg-macaronilight3 container w-full h-[455px] rounded-lg overflow-hidden">
               <img
-                className="absolute top-0 w-full h-[300px]"
+                className="absolute top-0 w-full h-[300px] object-cover"
                 src="/img/larom1.jpg"
               ></img>
               <div className="absolute bottom-3 px-5">
-                <h1 className="font-bold text-xl text-macaronidark mb-2">
+                <h1 className="font-bold font-beautiqueBlack text-xl text-macaronidark mb-2">
                   Cleanliness Guaranteed
                 </h1>
                 <p>
@@ -31,10 +31,10 @@ const lorem = () => {
             <div className="relative bg-macaronilight3 container w-full h-[455px] rounded-lg overflow-hidden">
               <img
                 className="absolute top-0 w-full h-[300px]"
-                src="/img/larom1.jpg"
+                src="/img/home5.png"
               ></img>
               <div className="absolute bottom-3 px-5">
-                <h1 className="font-bold text-xl text-macaronidark mb-2">
+                <h1 className="font-bold font-beautiqueBlack text-xl text-macaronidark mb-2">
                   Next Day Delivery
                 </h1>
                 <p>

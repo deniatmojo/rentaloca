@@ -8,7 +8,7 @@ const wardobe = () => {
         <div className="container h-[594px] w-[1279px] mt-10 pt-5 mx-auto items-center justify-center">
           <div className="container gap-2 flex flex-wrap h-auto w-[1279px] mx-auto items-center justify-between">
             {/* Card 1 */}
-            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-sm overflow-hidden rounded-lg relative">
+            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg relative">
               <div
                 className="w-full h-[400px] bg-cover rounded-lg"
                 style={{
@@ -24,7 +24,7 @@ const wardobe = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-sm overflow-hidden rounded-lg relative">
+            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg relative">
               <div
                 className="w-full h-[400px] bg-cover rounded-lg"
                 style={{
@@ -38,7 +38,7 @@ const wardobe = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-sm overflow-hidden rounded-lg relative">
+            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg relative">
               <div
                 className="w-full h-[400px] bg-cover rounded-lg"
                 style={{
@@ -54,7 +54,7 @@ const wardobe = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-sm overflow-hidden rounded-lg relative">
+            <div className="flex items-center px-2 pt-2 flex-col w-[24%] h-full bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg relative">
               <div
                 className="w-full h-[400px] bg-cover rounded-lg"
                 style={{

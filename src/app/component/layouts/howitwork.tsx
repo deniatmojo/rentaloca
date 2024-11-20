@@ -8,7 +8,7 @@ const howitwork = () => {
         <div className="container flex flex-row w-[1279px] h-[300px] mx-auto rounded-sm mt-16 gap-[20px]">
           {/* Box 1 */}
           <div
-            className="w-[413px] h-[300px] bg-cover bg-center rounded-lg overflow-auto relative"
+            className="w-[413px] h-[300px] bg-cover bg-center rounded-lg overflow-auto relative shadow-md"
             style={{ backgroundImage: "url('/img/home2.png')" }}
           >
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-macaronidark3 to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
@@ -19,7 +19,7 @@ const howitwork = () => {
 
           {/* Box 2 */}
           <div
-            className="w-[413px] h-[300px] bg-cover rounded-lg relative overflow-auto"
+            className="w-[413px] h-[300px] bg-cover rounded-lg relative overflow-auto shadow-md"
             style={{ backgroundImage: "url('/img/home3.jpeg')" }}
           >
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-transparent to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
@@ -32,7 +32,7 @@ const howitwork = () => {
 
           {/* Box 3 */}
           <div
-            className="w-[413px] h-[300px] bg-cover rounded-lg relative overflow-auto"
+            className="w-[413px] h-[300px] bg-cover rounded-lg relative overflow-auto shadow-md"
             style={{ backgroundImage: "url('/img/home4.png')" }}
           >
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-transparent to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
