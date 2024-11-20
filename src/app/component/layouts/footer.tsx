@@ -109,8 +109,8 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <div className="relative -mt-[48px] w-[1280px] mx-auto flex flx-row justify-center h-[48px]">
-        <h1 className="text-macaronidark3 text-xs font-Inter absolute bottom-0">
+      <div className="-mt-[48px] w-full mx-auto flex flx-row justify-center items-center h-[48px]">
+        <h1 className="text-macaronidark3 text-xs font-Inter">
           © 2024 Rentaloca Private Limited. All Rights Reserved.
         </h1>
       </div>

@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <a
             href="#"
-            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm"
+            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm  hover:bg-macaronidark2"
           >
             <svg
               width="16"
