@@ -1,8 +1,8 @@
 const wardobe = () => {
   return (
     <div>
-      <div className="container h-[714px] w-[1279px] mt-10 mx-auto items-center justify-center mb-32">
-        <div className="flex items-center justify-center text-6xl mx-auto font-Inter text-black mt-0">
+      <div className="container h-[714px] w-[1279px] mt-10 mx-auto items-center justify-center mb-32 font-beautiqueMed">
+        <div className="flex items-center justify-center text-6xl mx-auto font-beautiqueMed text-black mt-0">
           <h1>Rentaloca Wardobe</h1>
         </div>
         <div className="container h-[594px] w-[1279px] mt-10 pt-5 mx-auto items-center justify-center">
@@ -67,10 +67,10 @@ const wardobe = () => {
               <h3 className="text-black mt-1 mb-2 text-sm">Wine Gold</h3>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center w-[284px] h-[69px] px-6 py-[20px] rounded-lg mt-10 mx-auto bg-macaronidark">
+          <div className="flex flex-row items-center justify-center w-[284px] gap-[14px] h-[69px] px-6 py-[20px] rounded-lg mt-10 mx-auto bg-macaronidark">
             <a
               href="#"
-              className="flex items-center gap-2 text-xl font-semibold text-macaronidark2"
+              className="flex items-center gap-2 text-xl text-macaronidark2"
             >
               View All Product
               <svg

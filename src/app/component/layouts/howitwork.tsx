@@ -1,8 +1,8 @@
 const howitwork = () => {
   return (
     <div>
-      <div className="container h-[420px] w-[1279px] mt-40 mx-auto items-center justify-center mb-32">
-        <div className="flex items-center justify-center text-6xl mx-auto font-Inter text-black mt-0">
+      <div className="container h-[420px] w-[1279px] mt-40 mx-auto items-center justify-center mb-32 font-Inter">
+        <div className="flex items-center justify-center text-6xl mx-auto font-beautiqueMed text-black mt-0">
           <h1>How it Work</h1>
         </div>
         <div className="container flex flex-row w-[1279px] h-[300px] mx-auto rounded-sm mt-16 gap-[20px]">

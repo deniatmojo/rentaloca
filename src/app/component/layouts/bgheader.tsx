@@ -7,7 +7,7 @@ const bgheader = () => {
       >
         <div className="container flex-row items-center justify-between h-[607px] max-w-7xl mt-24 bg-transparant">
           <div className="container w-[616px] h[423px] mt-20 ml-20 flex flex-col">
-            <h1 className="text-6xl font-bold text-macaronidark">
+            <h1 className="text-6xl font-bold font-beautiqueMed text-macaronidark">
               Experience the Best <br></br> of Indonesia Local <br></br> Brands
               on Rent
             </h1>

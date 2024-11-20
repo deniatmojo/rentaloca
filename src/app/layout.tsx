@@ -12,6 +12,21 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const beautiqueBlack = localFont({
+  src: "../../public/fonts/BeautiqueDisplay-Black.otf",
+  variable: "--font-beautique-black",
+  weight: "100 900",
+});
+const beautiqueReg = localFont({
+  src: "../../public/fonts/BeautiqueDisplay-Regular.otf",
+  variable: "--font-beautique-reg",
+  weight: "100 900",
+});
+const beautiqueMed = localFont({
+  src: "../../public/fonts/BeautiqueDisplay-Medium.otf",
+  variable: "--font-beautique-med",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: "Rentaloca",
@@ -26,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${beautiqueBlack.variable} ${beautiqueReg.variable} ${beautiqueMed.variable} antialiased`}
       >
         {children}
       </body>
