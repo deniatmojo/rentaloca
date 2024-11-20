@@ -24,7 +24,7 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam's Stationers</h1>
+          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
           {/* Lingkaran Profil */}
@@ -39,7 +39,7 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam's Stationers</h1>
+          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
           {/* Lingkaran Profil */}
@@ -54,7 +54,7 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam's Stationers</h1>
+          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
           {/* Lingkaran Profil */}
@@ -69,7 +69,7 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam's Stationers</h1>
+          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
         </div>
       </div>
     </div>
