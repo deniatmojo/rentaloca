@@ -1,4 +1,3 @@
-import Navbar from "./navbar";
 import Bgheader from "./bgheader";
 const headerhome = () => {
   return (
