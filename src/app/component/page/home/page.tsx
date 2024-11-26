@@ -3,7 +3,6 @@ import HeaderHome from "../../layouts/header";
 import Howitwork from "../../layouts/howitwork";
 import Wardobe from "../../layouts/wardobe";
 import Lorem from "../../layouts/lorem";
-import Footer from "../../layouts/footer";
 import Faq from "../../layouts/faq";
 import Featured from "../../layouts/featured";
 import Testimoni from "../../layouts/testimoni";
