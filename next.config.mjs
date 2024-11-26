@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/component/page/catalogue",
         permanent: true,
       },
+      {
+        source: "/checkout",
+        destination: "/component/page/checkout",
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,8 +1,8 @@
 const bgheader = () => {
   return (
-    <div className="container bg-white -mt-[80px] h-[629px] max-w-7xl">
+    <div className="container bg-white -mt-[80px] h-[629px] max-w-[1280px] mx-auto">
       <div
-        className="h-full w-full 2xl:w-screen bg-cover flex items-center justify-center relative"
+        className="h-full w-[1280px] 2xl:w-screen bg-cover flex items-center justify-center relative"
         style={{ backgroundImage: "url('/img/bgheader.png')" }}
       >
         <div className="container static justify-between h-[607px] max-w-7xl -mt-20 bg-transparant">
