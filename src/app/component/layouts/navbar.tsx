@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -24,13 +25,13 @@ const Navbar = () => {
         {/* Menu Tengah */}
         <div className="hidden md:flex space-x-4">
           <a
-            href="#"
+            href="/home"
             className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/catalogue"
             className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Catalogue

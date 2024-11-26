@@ -3,7 +3,6 @@ import Bgheader from "./bgheader";
 const headerhome = () => {
   return (
     <main>
-      <Navbar />
       <Bgheader />
     </main>
   );

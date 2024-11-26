@@ -6,7 +6,7 @@ const demand = () => {
       {/* Gambar */}
       <img
         className="w-1/2 h-[476px] rounded-lg object-cover object-top shadow-md"
-        src="img/demand.jpg"
+        src="/img/demand.jpg"
         alt="Demand"
       />
 

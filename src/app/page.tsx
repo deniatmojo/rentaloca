@@ -1,9 +1,10 @@
-import HeaderHome from "./component/page/home";
+import Home from "./component/page/home/page";
+import Catalogue from "./component/page/catalogue/page";
 
 export default function header() {
   return (
     <div>
-      <HeaderHome />
+      <Home />
     </div>
   );
 }
