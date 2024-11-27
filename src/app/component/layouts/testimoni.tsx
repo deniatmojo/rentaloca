@@ -11,65 +11,74 @@ const Testimoni = () => {
       {/* Kontainer Testimoni */}
       <div className="flex flex-row justify-center items-center gap-2 px-0 mt-8">
         {/* Kartu Testimoni */}
-        <div className="relative w-[300px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
+        <div className="relative w-[300px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
           <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
 
           {/* Konten Testimoni */}
-          <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta.
+          <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark -mt-2">
+            Pengalaman saya menyewa di Rentaloca koleksi bajunya lengkap,
+            modelnya trendy, dan kualitasnya sangat terjaga. Proses pemesanannya
+            juga mudah dan pengiriman cepat. Sangat membantu untuk acara spesial
+            saya! Terima kasih, Rentaloca!
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
+          <h1 className="mt-1 text-left w-full">Sarah Math</h1>
+          <h1 className="mb-3 -mt-[6px] text-left w-full">
+            Graduation Testimoni
+          </h1>
         </div>
-        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
+        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
           <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
 
           {/* Konten Testimoni */}
-          <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta.
+          <p className="text-left text-xs text-macaronidark pb-[22px] border-b-2 border-macaronidark -mt-2">
+            Saya sewa dress di sini, modelnya cantik dan elegan banget. Bahannya
+            nyaman dipakai, dan ukurannya pas, plus baju datang dalam kondisi
+            bersih dan wangi. Acara jadi lebih percaya diri berkat Rentaloca!
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
+          <h1 className="mt-1 text-left w-full">Refanda Sutargo</h1>
+          <h1 className="mb-3 -mt-[6px] text-left w-full">
+            Kondangan Testimoni
+          </h1>
         </div>
-        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
+        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
           <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
 
           {/* Konten Testimoni */}
-          <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta.
+          <p className="text-left text-xs text-macaronidark pb-[37px] border-b-2 border-macaronidark -mt-2">
+            Koleksi gaunnya elegan dan kekinian, cocok banget untuk acara
+            formal. Baju yang saya sewa fit di badan, bersih, dan nyaman dipakai
+            seharian. Prosesnya juga mudah, tinggal pesan dan langsung dikirim.
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
+          <h1 className="mt-1 text-left w-full">Hannan Cinthya</h1>
+          <h1 className="mb-3 -mt-[6px] text-left w-full">
+            Kondangan Testimoni
+          </h1>
         </div>
-        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[3px]">
+        <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
           <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
 
           {/* Konten Testimoni */}
-          <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta.
+          <p className="text-left text-xs text-macaronidark pb-[36px] border-b-2 border-macaronidark -mt-2">
+            Pilihan bajunya cantik-cantik dan sesuai dengan deskripsi di
+            website. Prosesnya simpel, mulai dari pemesanan sampai pengembalian.
+            Baju yang saya sewa juga bersih dan wangi, benar-benar seperti baru.
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <h1 className="mt-1 text-left w-full">Kenneth Allen</h1>
-          <h1 className="mb-3 text-left w-full">Tam&apos;s Stationers</h1>
+          <h1 className="mt-1 text-left w-full">Kyana Octora</h1>
+          <h1 className="mb-3 -mt-[6px] text-left w-full">
+            Occasional Testimoni
+          </h1>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const wardobe = () => {
               <h2 className="text-black mt-1 font-bold text-lg">
                 Kanawa Dress
               </h2>
-              <h3 className="text-black mt-1 mb-2 text-sm">Black</h3>
+              <h3 className="text-black mt-1 mb-2 text-sm font-Inter">Black</h3>
             </div>
 
             {/* Card 2 */}
@@ -34,7 +34,7 @@ const wardobe = () => {
                 }}
               ></div>
               <h2 className="text-black mt-1 font-bold text-lg">Sasha Dress</h2>
-              <h3 className="text-black mt-1 mb-2 text-sm">Green</h3>
+              <h3 className="text-black mt-1 mb-2 text-sm font-Inter">Green</h3>
             </div>
 
             {/* Card 3 */}
@@ -50,7 +50,7 @@ const wardobe = () => {
               <h2 className="text-black mt-1 font-bold text-lg">
                 Bonita Dress
               </h2>
-              <h3 className="text-black mt-1 mb-2 text-sm">Pink</h3>
+              <h3 className="text-black mt-1 mb-2 text-sm font-Inter">Pink</h3>
             </div>
 
             {/* Card 4 */}
@@ -64,7 +64,9 @@ const wardobe = () => {
                 }}
               ></div>
               <h2 className="text-black mt-1 font-bold text-lg">Leona Dress</h2>
-              <h3 className="text-black mt-1 mb-2 text-sm">Wine Gold</h3>
+              <h3 className="text-black mt-1 mb-2 text-sm font-Inter">
+                Wine Gold
+              </h3>
             </div>
           </div>
           <div className="flex flex-row items-center justify-center w-[284px] gap-[14px] h-[69px] px-6 py-[20px] rounded-lg mt-10 mx-auto bg-macaronidark">
