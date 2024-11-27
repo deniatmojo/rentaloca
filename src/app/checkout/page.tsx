@@ -57,7 +57,30 @@ export default function Checkout() {
 
     try {
       await sendData(formData);
-      const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA}?text=saya%20sudah%20menyelesaikan%20transaksi%20dengan%20id:%20${state.id_session}`;
+      // const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA}?text=saya%20sudah%20menyelesaikan%20transaksi%20dengan%20id:%20${state.id_session}`;
+      // const waLink = `https://api.whatsapp.com/send?phone=+6282130085657&text=Nama%20%3A%20Putra%0AAlamat%20%3A%20Jl.%20Merdeka%20123%0ARental%20Durasi%20%3A%204%20hari%0APengiriman%20%3A%20Kurir%20Rentaloca%0APesanan%20Sewa%3A%0A1.%20Gaun%20Elegan%20%28Ukuran%20M%29%20-%20Jumlah%3A%201%20%28Link%20gambar%3A%20https%3A%2F%2Fdown-id.img.susercontent.com%2Ffile%2Ffcfd2b95555d8e1fdd2fa1eeb449be28%29%0A2.%20Kebaya%20Tradisional%20Indonesia%20%28Ukuran%20S%29%20-%20Jumlah%3A%201%20%28Link%20gambar%3A%20https%3A%2F%2Fdynamic.zacdn.com%2FoHXjANofhn4hVnTw8mDkpN6O5PE%3D%2Ffilters%3Aquality%2870%29%3Aformat%28webp%29%2Fhttps%3A%2F%2Fstatic-id.zacdn.com%2Fp%2Fbutik-sireh-pinang-3932-7710893-1.jpg%29`;
+
+      const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
+      
+      const ordersText = state.items
+        .map(
+          (order, index) =>
+            `${index + 1}. ${order.name} (Ukuran ${order.size}) - Jumlah: ${order.quantity} (Link gambar:  ${baseUrl}${order.image})`
+        ).join("%0A");
+
+      const message = `Nama%20%3A%20${encodeURIComponent(full_name)}%0AAlamat%20%3A%20${encodeURIComponent(
+        address
+      )}%0ARental%20Durasi%20%3A%20${encodeURIComponent(
+        '4 Hari'
+      )}%0APengiriman%20%3A%20${encodeURIComponent(
+        shippingMethod
+      )}%0APesanan%20Sewa%3A%0A${ordersText}`;
+
+      const phoneNumber = "+6282130085657";
+      const waLink = `https://api.whatsapp.com/send?phone=${encodeURIComponent(
+        phoneNumber
+      )}&text=${message}`;
+
       window.open(waLink, "_blank");
     } catch (error) {
       console.log('Error sending data:', error);
