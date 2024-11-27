@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   async redirects() {
     return [
       {
@@ -11,12 +12,7 @@ const nextConfig = {
         source: "/catalogue",
         destination: "/component/page/catalogue",
         permanent: true,
-      },
-      {
-        source: "/checkout",
-        destination: "/component/page/checkout",
-        permanent: true,
-      },
+      }
     ];
   },
 };

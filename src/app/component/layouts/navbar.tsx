@@ -1,15 +1,25 @@
+"use client"
 import Image from "next/image";
+import { useCart } from "@/context/CartContext";
+import Link from "next/link";
 
-const Navbar = () => {
+export default function Navbar() {
+
+  const { dispatch } = useCart();
+
+  const toggleCart = () => {
+    dispatch({ type: "TOGGLE_CART" });
+  };
+
   return (
     <nav
-      className="relative mx-auto lg:max-w-[1280px] 2xl:w-[1536px] h-20 z-20"
+      className="relative mx-auto w-full h-20 z-20 border-b"
       aria-label="Global"
     >
-      <div className="container absolute lg:max-w-[1280px] 2xl:w-[1536px] h-full flex items-center justify-between border-b-2 mx-auto">
+      <div className="w-full h-full flex items-center justify-between container mx-auto">
         {/* Logo */}
-        <div className="ml-20 flex flex-shrink-0 items-center">
-          <a href="#" className="flex">
+        <div className="ml-10 flex flex-shrink-0 items-center">
+          <Link href="#" className="flex">
             <span className="sr-only">Rentaloca</span>
             <Image
               className="h-6 w-auto"
@@ -18,30 +28,30 @@ const Navbar = () => {
               height={19.03}
               width={88}
             />
-          </a>
+          </Link>
         </div>
 
         {/* Menu Tengah */}
         <div className="hidden md:flex space-x-4">
-          <a
+          <Link
             href="/home"
-            className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
+            className="text-macaronidark hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/catalogue"
-            className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
+            className="text-macaronidark hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Catalogue
-          </a>
+          </Link>
         </div>
 
         {/* Tombol Kanan */}
-        <div className="flex items-center space-x-4">
-          <a
-            href="#"
-            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm  hover:bg-macaronidark2"
+        <div className="hidden md:flex items-center space-x-4">
+          <button
+            onClick={toggleCart}
+            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm  hover:bg-macaronidark3"
           >
             <svg
               width="16"
@@ -55,17 +65,20 @@ const Navbar = () => {
                 fill="#F9E9C9"
               />
             </svg>
-          </a>
-          <a
+          </button>
+          <Link
             href="#"
-            className="bg-macaronidark text-white rounded-full px-5 py-2 text-sm shadow-sm hover:bg-macaronidark2"
+            className="bg-macaronidark text-white rounded-full px-5 py-2 text-sm shadow-sm hover:bg-macaronidark3"
           >
             RENT NOW
-          </a>
+          </Link>
+        </div>
+        <div className="block md:hidden mr-10">
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 6C15.5 6.16576 15.4342 6.32473 15.3169 6.44194C15.1997 6.55915 15.0408 6.625 14.875 6.625H1.125C0.95924 6.625 0.800269 6.55915 0.683058 6.44194C0.565848 6.32473 0.5 6.16576 0.5 6C0.5 5.83424 0.565848 5.67527 0.683058 5.55806C0.800269 5.44085 0.95924 5.375 1.125 5.375H14.875C15.0408 5.375 15.1997 5.44085 15.3169 5.55806C15.4342 5.67527 15.5 5.83424 15.5 6ZM1.125 1.625H14.875C15.0408 1.625 15.1997 1.55915 15.3169 1.44194C15.4342 1.32473 15.5 1.16576 15.5 1C15.5 0.83424 15.4342 0.675269 15.3169 0.558058C15.1997 0.440848 15.0408 0.375 14.875 0.375H1.125C0.95924 0.375 0.800269 0.440848 0.683058 0.558058C0.565848 0.675269 0.5 0.83424 0.5 1C0.5 1.16576 0.565848 1.32473 0.683058 1.44194C0.800269 1.55915 0.95924 1.625 1.125 1.625ZM14.875 10.375H1.125C0.95924 10.375 0.800269 10.4408 0.683058 10.5581C0.565848 10.6753 0.5 10.8342 0.5 11C0.5 11.1658 0.565848 11.3247 0.683058 11.4419C0.800269 11.5592 0.95924 11.625 1.125 11.625H14.875C15.0408 11.625 15.1997 11.5592 15.3169 11.4419C15.4342 11.3247 15.5 11.1658 15.5 11C15.5 10.8342 15.4342 10.6753 15.3169 10.5581C15.1997 10.4408 15.0408 10.375 14.875 10.375Z" fill="#3D3322" />
+          </svg>
         </div>
       </div>
     </nav>
   );
 };
-
-export default Navbar;
