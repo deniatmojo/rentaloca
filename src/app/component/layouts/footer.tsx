@@ -5,18 +5,19 @@ const footer = () => {
         className="w-full flex flx-row justify-center h-[360px] 2xl:w-screen"
         style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
-        <div className="container relative flex flex-row mt-16 justify-between w-[1280px] h[216px] gap-[100px]">
+        <div className="container relative flex flex-row mt-20 justify-between w-[1280px] h[216px] gap-[100px]">
           <div className="container flex flex-col w-[413px] h-[216px] relative mr-0">
             <a
-              className="h-[42.43px] w-[197px] bg-cover mb-5"
+              className="-mt-5 h-[42.43px] w-[197px] bg-cover mb-5"
               href="#"
               style={{ backgroundImage: "url('/img/rentaloca.png')" }}
             ></a>
             <p className="text-sm text-macaronidark leading-relaxed w-[413px]">
-              Rentaloca Indonesia is an innovative platform revolutionizing
-              fashion accessibility. We provide an easy clothing rental
-              solution, allowing users to explore thousands of trendy outfit
-              options without the need to purchase.
+              Rentaloca Indonesia is a technology platform and a revolutionary
+              business model for the fashion authority that addresses all of the
+              problems with borrowing clotes and will be able to acces thousands
+              of outfits of designers and local clothing brands in Indonesia
+              throught Subscription-bases renting and one time rentals.
             </p>
             <div className="container flex flex-row absolute left-0 bottom-0 gap-[10px] h-[24px]">
               <a href="#" className="">
@@ -49,61 +50,45 @@ const footer = () => {
               </a>
             </div>
           </div>
-          <div className="container h-[114px] w-[738px] flex flex-row mt-16">
-            <div className="w-1/4 mr-12">
+          <div className="container h-[114px] w-[738px] flex flex-row mt-0 justify-between">
+            <div className="w-1/3 mr-12">
               <h1 className="text-macaronidark text-xs font-Inter font-bold whitespace-nowrap">
                 PRODUCT & SERVICE
               </h1>
               <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
-                Lorem Ipsum
+                ON TIME RENTAL
+              </h1>
+              <h1 className="text-macaronidark text-xs font-Inter mb-2 whitespace-nowrap">
+                RENTALOCA WARDOBE
               </h1>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
-              </h1>
-              <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
+                SELLING/BUYING
               </h1>
             </div>
-            <div className="w-1/4">
-              <h2 className="text-macaronidark text-xs font-Inter font-bold">
-                COMPANY
-              </h2>
-              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
-                Lorem Ipsum
-              </h1>
-              <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
-              </h1>
-              <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
-              </h1>
-            </div>
-            <div className="w-1/4">
+            <div className="w-1/3 mr-10">
               <h2 className="text-macaronidark text-xs font-Inter font-bold">
                 HELP
               </h2>
               <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
-                Lorem Ipsum
+                +62 8566660999
               </h1>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
+                Rentalocaindonesia@gmail.com
               </h1>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
+                @Rentaloca.Id
               </h1>
             </div>
-            <div className="w-1/4">
+            <div className="w-1/3">
               <h2 className="text-macaronidark text-xs font-Inter font-bold">
-                CONTACT US
+                COMPANY
               </h2>
               <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
-                Lorem Ipsum
+                CATALOGUE
               </h1>
+              <h1 className="text-macaronidark text-xs font-Inter mb-2">FAQ</h1>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
-              </h1>
-              <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                Lorem Ipsum
+                HOW IT WORK
               </h1>
             </div>
           </div>
