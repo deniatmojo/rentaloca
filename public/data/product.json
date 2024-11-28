@@ -245,7 +245,10 @@
         "slug": "kebaya-kenangan-nenek",
         "available": true,
         "foto": {
-            "main": "/img/kebaya-kenangan-nenek/main.png"
+            "main": "/img/kebaya-kenangan-nenek/main.png",
+            "thumbnail1": "/img/kebaya-kenangan-nenek/thumbnail1.png",
+            "thumbnail2": "/img/kebaya-kenangan-nenek/thumbnail2.png",
+            "thumbnail3": "/img/kebaya-kenangan-nenek/thumbnail3.png"
         },
         "size": "M",
         "bust": "112cm",

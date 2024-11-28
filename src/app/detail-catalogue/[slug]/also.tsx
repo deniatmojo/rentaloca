@@ -8,7 +8,7 @@ function getRandomProducts(products: any, count = 4) {
     return shuffled.slice(0, count);
 }
 
-export default function Also() {
+export default function Also( {data} : {data: any}) {
 
     const [randomProducts, setRandomProducts] = useState<any>([]);
 
@@ -16,7 +16,8 @@ export default function Also() {
         async function fetchProducts() {
             try {
                 const response = await fetch("/data/product.json");
-                const products = await response.json();
+                let products = await response.json();
+                products = products.filter((product: { slug: any; }) => product.slug !== data.slug);
                 const randomItems = getRandomProducts(products);
                 setRandomProducts(randomItems);
             } catch (error) {

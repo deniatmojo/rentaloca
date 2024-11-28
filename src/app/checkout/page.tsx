@@ -65,7 +65,8 @@ export default function Checkout() {
       const ordersText = state.items
         .map(
           (order, index) =>
-            `${index + 1}. ${order.name} (Ukuran ${order.size}) - Jumlah: ${order.quantity} (Link gambar:  ${baseUrl}${order.image})`
+            // `${index + 1}. ${order.name} (Ukuran ${order.size}) - Jumlah: ${order.quantity} (Link gambar:  ${baseUrl}${order.image})`
+            `${index + 1}. ${order.name} (Ukuran ${order.size}) - Jumlah: ${order.quantity}`
         ).join("%0A");
 
       const message = `Nama%20%3A%20${encodeURIComponent(full_name)}%0AAlamat%20%3A%20${encodeURIComponent(
@@ -171,15 +172,11 @@ export default function Checkout() {
                 <label htmlFor="bank" className="block text-sm lg:text-xl font-Inter font-medium text-macaronidark">
                   Bank Deposit
                 </label>
-                <input
-                  type="text"
-                  required
-                  id="bank"
-                  placeholder="BCA PT Rentaloca 000000000000"
-                  className="w-full text-macaronidark border border-[#9A9A9A] placeholder:text-[#9A9A9A] rounded-md px-5 py-[10px] bg-transparent outline-none text-[14px] lg:text-[20px]"
-                  value={bank_deposit}
-                  onChange={(e) => setBankDeposit(e.target.value)}
-                />
+                <div className="bg-gray-100 p-5 rounded-md border border-gray-300 text-gray-500">
+                  <p>BCA</p>
+                  <p>PT Rentaloca</p>
+                  <p>000000000000</p>
+                </div>
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Delivery Address</h1>
               <div className="space-y-2 mt-4">

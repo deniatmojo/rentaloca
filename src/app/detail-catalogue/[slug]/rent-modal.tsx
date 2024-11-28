@@ -1,11 +1,13 @@
 "use client"
 import { Modal } from "@mui/material";
-// @ts-ignore
-import { DateRangePicker } from "@nextui-org/date-picker";
-import "./range-date-picker.css"
 import { useCart } from "@/context/CartContext";
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { useState } from "react";
+import { Dayjs } from "dayjs";
 
-export default function RentModal({ open, setOpen } : { open:any, setOpen:any }) {
+export default function RentModal({ open, setOpen }: { open: any, setOpen: any }) {
 
     const { dispatch } = useCart();
 
@@ -14,6 +16,38 @@ export default function RentModal({ open, setOpen } : { open:any, setOpen:any })
     const toggleCart = () => {
         handleClose();
         dispatch({ type: "TOGGLE_CART" });
+    };
+
+    const [startDate, setStartDate] = useState<Dayjs | null>(null);
+    const [endDate, setEndDate] = useState<Dayjs | null>(null);
+    const [error, setError] = useState<string | null>(null);
+
+    const handleDateChange = (start: Dayjs | null, end: Dayjs | null) => {
+        setStartDate(start);
+        setStartDateContext(start);
+        setEndDate(end);
+        setEndDateContext(end);
+
+        if (start && end) {
+            const diffInDays = end.diff(start, 'day');
+            if (diffInDays > 3) {
+                setError('Batasan waktu sewa maksimal 3 hari.');
+                setStartDate(null);
+                setEndDate(null);
+                setStartDateContext(null);
+                setEndDateContext(null);
+            } else {
+                setError(null);
+            }
+        }
+    };
+
+    const setStartDateContext = (date: Date | null | Dayjs) => {
+        dispatch({ type: "SET_START_DATE", payload: date });
+      };
+      
+    const setEndDateContext = (date: Date | null | Dayjs) => {
+        dispatch({ type: "SET_END_DATE", payload: date });
     };
 
     return (
@@ -29,11 +63,27 @@ export default function RentModal({ open, setOpen } : { open:any, setOpen:any })
                         <h1 className="font-beautiqueMed text-[32px]">Select Delivery Date</h1>
                         <h2 className="text-[14px]">Batasan waktu sewa maksimal 3 hari</h2>
                     </div>
-                    <div className="flex flex-col items-center my-5">
-                        <DateRangePicker
-                            label=""
-                            className="max-w-sm"
-                        />
+                    <div className="flex flex-col items-center my-10">
+                        <div className="flex items-center gap-5 max-w-md">
+                            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                <DatePicker
+                                    label="Start Date"
+                                    value={startDate}
+                                    onChange={(newValue) => handleDateChange(newValue, endDate)}
+                                    slotProps={{ textField: { size: 'small' } }}
+                                />
+                            </LocalizationProvider>
+                            <div>-</div>
+                            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                <DatePicker
+                                    label="End Date"
+                                    value={endDate}
+                                    onChange={(newValue) => handleDateChange(startDate, newValue)}
+                                    slotProps={{ textField: { size: 'small' } }}
+                                />
+                            </LocalizationProvider>
+                        </div>
+                        {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
                     </div>
                     <div className="w-full flex gap-5">
                         <button className="text-[12px] lg:text-[16px] flex-1 py-3 border border-macaronidark rounded-[14px]" onClick={handleClose}>Kembali</button>
