@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import FormCatalogue from "./form"
 import Also from "./also"
 import RentModal from "../../component/rent-modal"
-import { useState } from "react"
 // @ts-ignore
 import ReactImageMagnify from 'react-image-magnify';
 import './form.css'

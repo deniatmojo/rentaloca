@@ -19,7 +19,8 @@ export default function FormCatalogue({ data }: { data: any }) {
                 retail_price: data.retail_price,
                 rental: data.rental,
                 quantity: quantity,
-                image: data.foto.main
+                image: data.foto.main,
+                maxquantity: data.quantity
             },
         });
     };
@@ -42,7 +43,6 @@ export default function FormCatalogue({ data }: { data: any }) {
             <div>
                 <h6 className="text-[18px] font-medium mb-2">Size</h6>
                 <div className="flex gap-x-[16px] flex-wrap gap-y-2">
-                    <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'ALL SIZE' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>All Size</button>
                     <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'S' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>S</button>
                     <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'M' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>M</button>
                     <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'L' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>L</button>
@@ -53,11 +53,11 @@ export default function FormCatalogue({ data }: { data: any }) {
             <div>
                 <h6 className="text-[18px] font-medium mb-2">Quantity</h6>
                 <select onChange={(e) => setQuantity(parseInt(e.target.value))} value={quantity} className="px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-md appearance-none">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    {Array.from({ length: data.quantity }, (_, index) => (
+                        <option key={index + 1} value={index + 1}>
+                            {index + 1}
+                        </option>
+                    ))}
                 </select>
             </div>
 

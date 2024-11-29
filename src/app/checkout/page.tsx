@@ -16,9 +16,9 @@ export default function Checkout() {
     (total, item) => total + item.rental * item.quantity, 0
   );
 
-  const [shippingMethod, setShippingMethod] = useState('standard')
+  const [shippingMethod, setShippingMethod] = useState('gosend')
 
-  const shipping = shippingMethod === 'standard' ? 30000 : 50000;
+  const shipping = shippingMethod === 'instant' ? 30000 : (shippingMethod === 'sameday' ? 20000 : (shippingMethod === 'paxel' ? 15000 : 10000));
   const deposit = 120000;
   const total = subtotal + shipping + deposit;
 
@@ -127,6 +127,14 @@ export default function Checkout() {
 
     fetchProvinces();
   }, []);
+
+  useEffect(() => {
+    if(provinces !== '31') {
+      setShippingMethod('expedisi')
+    } else {
+      setShippingMethod('instant')
+    }
+  }, [provinces])
 
   const [isStateLoaded, setIsStateLoaded] = useState(false);
 
@@ -295,22 +303,38 @@ export default function Checkout() {
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
               {["31", "32", "33", "34", "35", "36"].includes(provinces) || provinces == '' ? (
-                <div className="flex gap-5 mt-5 text-macaronidark">
-                  <div
-                    className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'standard' ? 'bg-macaronilight3' : ''}`}
-                    onClick={() => setShippingMethod('standard')}
-                  >
-                    <h3 className="font-bold">Standard Delivery</h3>
-                    <p className="font-normal">2-3 Business Days</p>
-                    <p className="font-normal">$5.00</p>
-                  </div>
-                  <div
-                    className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'express' ? 'bg-macaronilight3' : ''}`}
-                    onClick={() => setShippingMethod('express')}
-                  >
-                    <h3 className="font-bold">Express Delivery</h3>
-                    <p className="font-normal">1 Business Day</p>
-                    <p className="font-normal">$15.00</p>
+                <div className="space-y-5 text-macaronidark mt-2">
+                  {["31"].includes(provinces) && 
+                    <>
+                      <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
+                        <div className="grid grid-cols-[100px_auto]">
+                          <div>Instan</div>
+                          <div>(1-4 JAM)</div>
+                        </div>
+                        <div>Rp 30.000</div>
+                      </div>
+                      <div onClick={() => setShippingMethod('sameday')} className={`${shippingMethod === 'sameday' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
+                        <div className="grid grid-cols-[100px_auto]">
+                          <div>Sameday</div>
+                          <div>(4-8 JAM)</div>
+                        </div>
+                        <div>Rp 20.000</div>
+                      </div>
+                      <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
+                        <div className="grid grid-cols-[100px_auto]">
+                          <div>Paxel</div>
+                          <div>(4-10 JAM)</div>
+                        </div>
+                        <div>Rp 15.000</div>
+                      </div>
+                    </>
+                  }
+                  <div onClick={() => setShippingMethod('expedisi')} className={`${shippingMethod === 'expedisi' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
+                    <div className="grid grid-cols-[100px_auto]">
+                      <div>Ekspedisi </div>
+                      <div>(1-2 Hari)</div>
+                    </div>
+                    <div>Rp 10.000</div>
                   </div>
                 </div>
               ) : (
@@ -318,9 +342,11 @@ export default function Checkout() {
                   <p className="text-red-500 font-bold">Sorry, shipping is not available outside Java Island.</p>
                 </div>
               )}
-              <div className="mt-10">
-                <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
-              </div>
+              {["31", "32", "33", "34", "35", "36"].includes(provinces) || provinces == '' ? (
+                <div className="mt-10">
+                  <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
+                </div>
+              ) : (<></>)}
             </div>
           </form>
         </div>

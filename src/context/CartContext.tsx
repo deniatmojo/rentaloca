@@ -11,6 +11,7 @@ interface CartItem {
   rental: number;
   quantity: number;
   image: string;
+  maxquantity: number
 }
 
 interface CartState {
@@ -41,7 +42,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       );
       if (existingItemIndex >= 0) {
         const updatedItems = [...state.items];
-        updatedItems[existingItemIndex].quantity += action.payload.quantity;
+        updatedItems[existingItemIndex].quantity = Math.min(action.payload.maxquantity, updatedItems[existingItemIndex].quantity + action.payload.quantity);
         return { ...state, items: updatedItems };
       }
       return { ...state, items: [...state.items, action.payload] };

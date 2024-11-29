@@ -109,7 +109,7 @@ export default function Cart() {
                                         </p>
                                         <div className="flex gap-2 mt-4">
                                             <div
-                                                className="w-4 h-4 lg:w-5 lg:h-5 rounded-full flex flex-col items-center justify-center border-2 text-[10px] lg:text-xs cursor-pointer text-macaronidark3 border-macaronidark3"
+                                                className="select-none w-4 h-4 lg:w-5 lg:h-5 rounded-full flex flex-col items-center justify-center border-2 text-[10px] lg:text-xs cursor-pointer text-macaronidark3 border-macaronidark3"
                                                 onClick={() =>
                                                     handleUpdateQuantity(
                                                         item.id,
@@ -124,9 +124,9 @@ export default function Cart() {
                                                 {item.quantity}
                                             </div>
                                             <div
-                                                className="w-4 h-4 lg:w-5 lg:h-5 rounded-full flex flex-col items-center justify-center border-2 text-[10px] lg:text-xs cursor-pointer text-macaronidark3 border-macaronidark3"
+                                                className="select-none w-4 h-4 lg:w-5 lg:h-5 rounded-full flex flex-col items-center justify-center border-2 text-[10px] lg:text-xs cursor-pointer text-macaronidark3 border-macaronidark3"
                                                 onClick={() =>
-                                                    handleUpdateQuantity(item.id, item.size, item.quantity + 1)
+                                                    handleUpdateQuantity(item.id, item.size, Math.min(item.maxquantity, item.quantity + 1))
                                                 }
                                             >
                                                 +

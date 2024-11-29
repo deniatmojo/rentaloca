@@ -7,7 +7,7 @@
         "foto": {
             "main": "/img/julia-set-nude-pink/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -19,7 +19,8 @@
         "bahan": "viscose",
         "retail_price": 468000,
         "rental": 180000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 2,
@@ -29,7 +30,7 @@
         "foto": {
             "main": "/img/julia-set-cream/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -41,7 +42,8 @@
         "bahan": "viscose",
         "retail_price": 468000,
         "rental": 180000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 3,
@@ -51,7 +53,7 @@
         "foto": {
             "main": "/img/julia-set-green/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -63,7 +65,8 @@
         "bahan": "viscose",
         "retail_price": 468000,
         "rental": 180000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 4,
@@ -73,7 +76,7 @@
         "foto": {
             "main": "/img/julia-set-black-nude-pink/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -85,7 +88,8 @@
         "bahan": "viscose",
         "retail_price": 468000,
         "rental": 180000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 5,
@@ -95,7 +99,7 @@
         "foto": {
             "main": "/img/julia-set-blue/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -107,7 +111,8 @@
         "bahan": "viscose",
         "retail_price": 468000,
         "rental": 180000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 6,
@@ -117,7 +122,7 @@
         "foto": {
             "main": "/img/julia-set-nude-pink/main.png"
         },
-        "size": "ALL SIZE",
+        "size": "S",
         "bust": "108cm",
         "waist": "115cm",
         "hip": "115cm",
@@ -129,7 +134,8 @@
         "bahan": "viscose",
         "retail_price": 528000,
         "rental": 200000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 7,
@@ -150,7 +156,8 @@
         "bahan": "Brokat, Lace, Organza Lagosi",
         "retail_price": 649000,
         "rental": 235000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 8,
@@ -171,7 +178,8 @@
         "bahan": "Brokat vs satin premium maxmara",
         "retail_price": 749000,
         "rental": 245000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 2
     },
     {
         "id": 11,
@@ -193,7 +201,8 @@
         "bahan": "Batik Lukis",
         "retail_price": 649000,
         "rental": 265000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 12,
@@ -215,7 +224,8 @@
         "bahan": "Tenun",
         "retail_price": 649000,
         "rental": 255000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 13,
@@ -237,7 +247,8 @@
         "bahan": "Brokat vs satin premium maxmara",
         "retail_price": 925000,
         "rental": 255000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 14,
@@ -262,7 +273,8 @@
         "bahan": "Tenun Troso",
         "retail_price": 1022500,
         "rental": 265000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 15,
@@ -284,7 +296,8 @@
         "bahan": "Premium Tweed",
         "retail_price": 600000,
         "rental": 200000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 16,
@@ -306,7 +319,8 @@
         "bahan": "Premium Tweed",
         "retail_price": 600000,
         "rental": 200000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 17,
@@ -328,7 +342,8 @@
         "bahan": "Premium Tweed",
         "retail_price": 600000,
         "rental": 200000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     },
     {
         "id": 18,
@@ -350,6 +365,7 @@
         "bahan": "Premium Tweed",
         "retail_price": 1022500,
         "rental": 235000,
-        "discount": 0
+        "discount": 0,
+        "quantity": 1
     }
 ]
