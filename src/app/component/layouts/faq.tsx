@@ -1,8 +1,8 @@
 const faq = () => {
   return (
-    <div className="container w-[1280px] h-[808px] mt-24 flex flex-col justify-center items-center mx-auto">
-      <div className="container w-full mx-auto text-center">
-        <h1 className="text-macaronidark font-beautiqueMed text-6xl mb-8">
+    <div className="container max-w-full h-auto mt-24 flex flex-col justify-center items-center mx-auto">
+      <div className="container w-full sm:w-[90%] md:w-[80%] h-[40px] border-b border-macaronidark flex items-center justify-between">
+        <h1 className="text-macaronidark font-beautiqueMed text-6xl sm:text-4xl mb-8">
           FAQ Rentaloca
         </h1>
       </div>
@@ -14,6 +14,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +30,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +48,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +67,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +85,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +103,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -115,6 +121,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -132,6 +139,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -149,6 +157,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -166,6 +175,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -183,6 +193,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -200,6 +211,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -217,6 +229,7 @@ const faq = () => {
           <svg
             width="12"
             height="7"
+            className="sm:w-6 sm:h-6 md:w-8 md:h-8"
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

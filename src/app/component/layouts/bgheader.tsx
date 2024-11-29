@@ -1,36 +1,42 @@
 const bgheader = () => {
   return (
-    <div className="container bg-white -mt-[80px] h-[629px] max-w-[1280px] mx-auto">
+    <div className="container bg-white -mt-[80px] h-auto max-w-full mx-auto">
       <div
-        className="h-full w-[1280px] 2xl:w-screen bg-cover flex items-center justify-center relative"
+        className="h-full w-full bg-cover flex items-center justify-center relative"
         style={{ backgroundImage: "url('/img/bgheader.png')" }}
       >
-        <div className="container static justify-between h-[607px] max-w-7xl -mt-20 bg-transparant">
-          <div className="container flex flex-row justify-between h-[607px] max-w-7xl mt-24 bg-transparant">
-            <div className="container w-[616px] h[423px] mt-20 ml-20 flex flex-col">
-              <h1 className="text-6xl font-bold font-beautiqueMed text-macaronidark">
-                Experience the Best <br></br> of Indonesia Local <br></br>{" "}
-                Brands on Rent
+        {/* Container Utama */}
+        <div className="container justify-between h-auto max-w-7xl bg-transparent px-5 sm:px-10">
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center h-auto mt-10 md:mt-24">
+            {/* Kolom Kiri */}
+            <div className="w-full md:w-[616px] mt-5 md:mt-20 flex flex-col items-start">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold font-beautiqueMed text-macaronidark leading-tight">
+                Experience the Best <br /> of Indonesia Local <br /> Brands on
+                Rent
               </h1>
-              <p className="mt-5 text-macaronidark w-[522px]">
+              <p className="mt-5 text-sm sm:text-base md:text-lg text-macaronidark w-full md:w-[522px]">
                 Rentaloca Indonesia is a technology and a revolutionary business
                 model the fashion authority into the hands of our users and
                 offers them a platform for exchange that addresses all of the
                 problems with borrowing clothes and will be able to access
                 thousands of outfits (and still growing!).
               </p>
-              <div className="w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark">
-                <a href="#" className=" text-lg text-macaronidark2 shadow-sm">
+              <div className="w-full sm:w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark">
+                <a href="#" className="text-lg text-macaronidark2 shadow-sm">
                   Get Started
                 </a>
               </div>
             </div>
+
+            {/* Kolom Kanan */}
             <div
-              className="w-[483px] h-[630px] -mt-[68px] bg-cover"
+              className="w-full md:w-[483px] h-[300px] md:h-[630px] bg-cover mt-5 md:mt-0"
               style={{ backgroundImage: "url('/img/home1.png')" }}
             ></div>
           </div>
         </div>
+
+        {/* Footer Absolute */}
         <div className="absolute flex flex-row my-auto w-[683px] h-[96px] -bottom-12 rounded-lg border-2 border-macaronidark3 mx-auto bg-macaronilight items-center justify-between">
           <div className="ml-5 mx-auto flex flex-1 items-center justify-center gap-x-[1px]">
             <a
@@ -90,4 +96,5 @@ const bgheader = () => {
     </div>
   );
 };
+
 export default bgheader;
