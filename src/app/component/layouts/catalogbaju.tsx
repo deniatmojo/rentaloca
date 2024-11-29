@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import PriceSlider from "../fragments/sliderharga";
 import ClothingCard from "../elements/ClothingCard";
 
-const catalogbaju = () => {
+const Catalogbaju = () => {
   const clothingItems = [
     {
       name: "Julia Set Nude Pink",
@@ -258,4 +258,4 @@ const catalogbaju = () => {
   );
 };
 
-export default catalogbaju;
+export default Catalogbaju;
