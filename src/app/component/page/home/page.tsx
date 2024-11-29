@@ -8,6 +8,7 @@ import Featured from "../../layouts/featured";
 import Testimoni from "../../layouts/testimoni";
 import Featuredon from "../../layouts/featuredon";
 import Demand from "../../layouts/demand";
+import Join from "../../layouts/join";
 
 const home = () => {
   return (
@@ -16,6 +17,7 @@ const home = () => {
       <Howitwork />
       <Wardobe />
       <Lorem />
+      <Join />
       <Featured />
       <Testimoni />
       <Featuredon />

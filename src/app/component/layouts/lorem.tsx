@@ -4,7 +4,7 @@ const lorem = () => {
       <div className="container mt-10 w-[1280px] h-[575px] mx-auto">
         <div className="flex items-center justify-center text-6xl mx-auto text-black mt-0">
           <h1 className="text-macaronidark font-beautiqueMed text-6xl mt-0 mx-auto mb-8">
-            Lorem Ipsum
+            Cleanliness Guaranteed
           </h1>
         </div>
         <div className="container w-[1280px] h-[455px] flex items-center justify-center gap-2">
@@ -39,7 +39,7 @@ const lorem = () => {
                 </h1>
                 <p>
                   Now our delivery service is even faster, request your box
-                  before the day ends everyday (yes, even in midnight!), and you
+                  before the day ends everyday (Yes, even in midnight!), and you
                   can receive your box on the next day. Available for
                   Jabodetabek area only, through GoSend delivery option.
                 </p>
