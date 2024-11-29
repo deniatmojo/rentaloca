@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client"
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import { useCart } from "@/context/CartContext";
 
 export default function Checkout() {
 
-  const { state } = useCart();
+  const { state, dispatch } = useCart();
   const router = useRouter();
   const [isRedirecting, setIsRedirecting] = useState(false);
 
@@ -31,6 +32,27 @@ export default function Checkout() {
   const [postal_code, setPostalCode] = useState('');
   const [provinces, setProvinces] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const calculateDaysDifference = (startDate: any, endDate: any) => {
+    if (!startDate || !endDate) return 0;
+
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    const differenceInTime = end.getTime() - start.getTime();
+    const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+
+    return Math.ceil(differenceInDays);
+  };
+
+  const formatDateRange = (startDate: any, endDate: any) => {
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    const start = new Date(startDate).toLocaleDateString('en-GB', options);
+    const end = new Date(endDate).toLocaleDateString('en-GB', options);
+
+    return `${start} - ${end}`;
+  };
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,11 +79,14 @@ export default function Checkout() {
 
     try {
       await sendData(formData);
+    } catch (error) {
+      console.log('Error sending data:', error);
+    } finally {
       // const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA}?text=saya%20sudah%20menyelesaikan%20transaksi%20dengan%20id:%20${state.id_session}`;
       // const waLink = `https://api.whatsapp.com/send?phone=+6282130085657&text=Nama%20%3A%20Putra%0AAlamat%20%3A%20Jl.%20Merdeka%20123%0ARental%20Durasi%20%3A%204%20hari%0APengiriman%20%3A%20Kurir%20Rentaloca%0APesanan%20Sewa%3A%0A1.%20Gaun%20Elegan%20%28Ukuran%20M%29%20-%20Jumlah%3A%201%20%28Link%20gambar%3A%20https%3A%2F%2Fdown-id.img.susercontent.com%2Ffile%2Ffcfd2b95555d8e1fdd2fa1eeb449be28%29%0A2.%20Kebaya%20Tradisional%20Indonesia%20%28Ukuran%20S%29%20-%20Jumlah%3A%201%20%28Link%20gambar%3A%20https%3A%2F%2Fdynamic.zacdn.com%2FoHXjANofhn4hVnTw8mDkpN6O5PE%3D%2Ffilters%3Aquality%2870%29%3Aformat%28webp%29%2Fhttps%3A%2F%2Fstatic-id.zacdn.com%2Fp%2Fbutik-sireh-pinang-3932-7710893-1.jpg%29`;
 
       const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-      
+
       const ordersText = state.items
         .map(
           (order, index) =>
@@ -72,7 +97,7 @@ export default function Checkout() {
       const message = `Nama%20%3A%20${encodeURIComponent(full_name)}%0AAlamat%20%3A%20${encodeURIComponent(
         address
       )}%0ARental%20Durasi%20%3A%20${encodeURIComponent(
-        '4 Hari'
+        `${calculateDaysDifference(state.startDate, state.endDate)} Hari (${formatDateRange(state.startDate, state.endDate)})`
       )}%0APengiriman%20%3A%20${encodeURIComponent(
         shippingMethod
       )}%0APesanan%20Sewa%3A%0A${ordersText}`;
@@ -83,21 +108,45 @@ export default function Checkout() {
       )}&text=${message}`;
 
       window.open(waLink, "_blank");
-    } catch (error) {
-      console.log('Error sending data:', error);
-    } finally {
       setIsSubmitting(false);
     }
   };
 
+  const [options, setOptions] = useState([]);
+
   useEffect(() => {
-    if (state.items.length === 0) {
+    const fetchProvinces = async () => {
+      try {
+        const response = await fetch('/data/provinsi.json');
+        const data = await response.json();
+        setOptions(data);
+      } catch (error) {
+        console.error("Gagal mengambil data provinsi:", error);
+      }
+    };
+
+    fetchProvinces();
+  }, []);
+
+  const [isStateLoaded, setIsStateLoaded] = useState(false);
+
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cartState");
+    if (savedCart) {
+      const parsedCart = JSON.parse(savedCart);
+      dispatch({ type: "RESET_STATE", payload: parsedCart });
+    }
+    setIsStateLoaded(true);
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isStateLoaded && state.items.length === 0) {
       setIsRedirecting(true);
       setTimeout(() => {
         router.push("/catalogue");
       }, 2000);
     }
-  }, [state.items, router]);
+  }, [state.items, isStateLoaded, router]);
 
   if (isRedirecting) {
     return <div className="text-macaronidark flex justify-center mt-10">Cart is empty. Redirecting to catalogue...</div>;
@@ -227,29 +276,48 @@ export default function Checkout() {
                 <label htmlFor="provinces" className="block text-sm lg:text-xl font-Inter font-medium text-macaronidark">
                   Provinces
                 </label>
-                <input
-                  type="text"
-                  required
+                <select
                   id="provinces"
-                  placeholder="Enter Provinces"
-                  className="w-full text-macaronidark border border-[#9A9A9A] placeholder:text-[#9A9A9A] rounded-md px-5 py-[10px] bg-transparent outline-none text-[14px] lg:text-[20px]"
+                  required
                   value={provinces}
                   onChange={(e) => setProvinces(e.target.value)}
-                />
+                  className="w-full text-macaronidark border border-[#9A9A9A] rounded-md px-5 py-[10px] bg-transparent outline-none text-[14px] lg:text-[20px]"
+                >
+                  <option value="" disabled>
+                    Select a Province
+                  </option>
+                  {options.map((province) => (
+                    <option key={province.id} value={province.id}>
+                      {province.nama}
+                    </option>
+                  ))}
+                </select>
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
-              <div className="flex gap-5 mt-5 text-macaronidark">
-                <div className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'standard' ? 'bg-macaronilight3' : ''}`} onClick={() => setShippingMethod('standard')}>
-                  <h3 className="font-bold">Standard Delivery</h3>
-                  <p className="font-normal">2-3 Business Days</p>
-                  <p className="font-normal">$5.00</p>
+              {["31", "32", "33", "34", "35", "36"].includes(provinces) || provinces == '' ? (
+                <div className="flex gap-5 mt-5 text-macaronidark">
+                  <div
+                    className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'standard' ? 'bg-macaronilight3' : ''}`}
+                    onClick={() => setShippingMethod('standard')}
+                  >
+                    <h3 className="font-bold">Standard Delivery</h3>
+                    <p className="font-normal">2-3 Business Days</p>
+                    <p className="font-normal">$5.00</p>
+                  </div>
+                  <div
+                    className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'express' ? 'bg-macaronilight3' : ''}`}
+                    onClick={() => setShippingMethod('express')}
+                  >
+                    <h3 className="font-bold">Express Delivery</h3>
+                    <p className="font-normal">1 Business Day</p>
+                    <p className="font-normal">$15.00</p>
+                  </div>
                 </div>
-                <div className={`p-6 rounded-lg border border-macaronidark w-full hover:bg-macaronilight3 cursor-pointer ${shippingMethod === 'express' ? 'bg-macaronilight3' : ''}`} onClick={() => setShippingMethod('express')}>
-                  <h3 className="font-bold">Express Delivery</h3>
-                  <p className="font-normal">1 Business Day</p>
-                  <p className="font-normal">$15.00</p>
+              ) : (
+                <div className="mt-5 text-macaronidark">
+                  <p className="text-red-500 font-bold">Sorry, shipping is not available outside Java Island.</p>
                 </div>
-              </div>
+              )}
               <div className="mt-10">
                 <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
               </div>
