@@ -3,7 +3,7 @@ import formatRupiah from "@/function/formatRupiah"
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
-export default function FormCatalogue({ data, setOpenModal }: { data: any, setOpenModal: any }) {
+export default function FormCatalogue({ data }: { data: any }) {
 
     const { dispatch } = useCart();
 
@@ -22,8 +22,15 @@ export default function FormCatalogue({ data, setOpenModal }: { data: any, setOp
                 image: data.foto.main
             },
         });
-        dispatch({ type: "TOGGLE_CART" });
     };
+    
+    const toggleCart = () => {
+        dispatch({ type: "TOGGLE_CART" });
+    }
+
+    const toggleRent = () => {
+        dispatch({ type: "TOGGLE_RENT" });
+    }
 
     return (
         <>
@@ -55,8 +62,8 @@ export default function FormCatalogue({ data, setOpenModal }: { data: any, setOp
             </div>
 
             <div className="w-full flex gap-5">
-                <button onClick={handleAddToCart} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronilight">Add To Cart</button>
-                <button onClick={() => setOpenModal(true)} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronidark3 bg-macaronidark text-white">Rent It Now</button>
+                <button onClick={() =>  {handleAddToCart(); toggleCart()}} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronilight">Add To Cart</button>
+                <button onClick={() => {toggleRent(); handleAddToCart()}} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronidark3 bg-macaronidark text-white">Rent It Now</button>
             </div>
 
             <div className="text-[14px] bg-macaronilight2/60 text-macaronidark border border-macaronidark px-[24px] py-[12px] rounded-[10px]">

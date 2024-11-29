@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Inter } from 'next/font/google'
 import FormCatalogue from "./form"
 import Also from "./also"
-import RentModal from "./rent-modal"
+import RentModal from "../../component/rent-modal"
 import { useState } from "react"
 // @ts-ignore
 import ReactImageMagnify from 'react-image-magnify';
@@ -18,9 +18,6 @@ export default function ClientPage({
 }: {
     params: any
 }) {
-
-    const [open, setOpen] = useState(false);
-
     return (
         <div className={`${inter.className} my-[100px]`}>
             <div className={`container h-full mx-auto text-macaronidark px-5 grid md:grid-cols-2 grid-cols-1 gap-y-10`}>
@@ -75,14 +72,10 @@ export default function ClientPage({
                 <div className="space-y-10">
                     <FormCatalogue
                         data={params}
-                        setOpenModal={setOpen}
                     />
                 </div>
             </div>
-            <RentModal
-                open={open}
-                setOpen={setOpen}
-            />
+            <RentModal/>
             <Also 
                 data={params}
             />

@@ -3,11 +3,12 @@ import { Drawer } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useCart } from "@/context/CartContext";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Cart() {
 
     const { state, dispatch } = useCart();
+    const router = useRouter();
 
     const handleRemoveItem = (id: string, size: string) => {
         dispatch({
@@ -41,6 +42,16 @@ export default function Cart() {
 
     const toggleCart = () => {
         dispatch({ type: "TOGGLE_CART" });
+    };
+
+    const handleCheckout = () => {
+        toggleCart();
+
+        if (!state.startDate || !state.endDate) {
+            dispatch({ type: "TOGGLE_RENT" });
+        } else {
+            router.push('/checkout');
+        }
     };
 
     return (
@@ -144,11 +155,12 @@ export default function Cart() {
 
                 {state.items.length > 0 && (
                     <div className="text-xs lg:text-sm lg:mt-0">
-                        <Link onClick={toggleCart} href={'/checkout'}>
-                            <button className="w-full py-3 mb-2 bg-[#3f3d33] text-white rounded-md hover:bg-[#2e2c27] transition">
-                                Checkout - Rp {totalPrice.toLocaleString()}
-                            </button>
-                        </Link>
+                        <button 
+                            onClick={handleCheckout} 
+                            className="w-full py-3 mb-2 bg-[#3f3d33] text-white rounded-md hover:bg-[#2e2c27] transition"
+                        >
+                            Checkout - Rp {totalPrice.toLocaleString()}
+                        </button>
                         <p className="text-center text-macaronidark">
                             Shipping & taxes calculated at
                         </p>
