@@ -1,14 +1,18 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav
       className="relative mx-auto lg:max-w-[1280px] 2xl:w-[1536px] h-20 z-20"
       aria-label="Global"
     >
-      <div className="container absolute lg:max-w-[1280px] 2xl:w-[1536px] h-full flex items-center justify-between border-b-2 mx-auto">
+      <div className="container relative lg:max-w-[1280px] 2xl:w-[1536px] h-full flex items-center justify-between border-b-2 mx-auto px-5">
         {/* Logo */}
-        <div className="ml-20 flex flex-shrink-0 items-center">
+        <div className="flex items-center">
           <a href="#" className="flex">
             <span className="sr-only">Rentaloca</span>
             <Image
@@ -21,27 +25,60 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Menu Tengah */}
-        <div className="hidden md:flex space-x-4">
+        {/* Hamburger Menu (Mobile) */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="inline-flex items-center justify-center rounded-full p-2 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-macaronidark"
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Menu Items */}
+        <div
+          className={`absolute md:static top-full left-0 w-full md:w-auto md:flex space-y-4 md:space-y-0 md:space-x-4 bg-white md:bg-transparent z-10 md:z-auto ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
           <a
             href="/home"
-            className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
+            className="block md:inline-block text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Home
           </a>
           <a
             href="/catalogue"
-            className="text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
+            className="block md:inline-block text-macaronidark font-bold hover:text-white hover:bg-macaronidark px-4 py-2 rounded-full"
           >
             Catalogue
           </a>
         </div>
 
-        {/* Tombol Kanan */}
-        <div className="flex items-center space-x-4">
+        {/* Right Buttons */}
+        <div className="hidden md:flex items-center space-x-4">
           <a
             href="#"
-            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm  hover:bg-macaronidark2"
+            className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full p-3 shadow-sm hover:bg-macaronidark2"
           >
             <svg
               width="16"
