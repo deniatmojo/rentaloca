@@ -74,6 +74,7 @@ export default function RentModal() {
                                 <DatePicker
                                     label="Start Date"
                                     value={startDate}
+                                    minDate={dayjs()}
                                     onChange={(newValue) => handleDateChange(newValue, endDate)}
                                     slotProps={{ textField: { size: 'small' } }}
                                 />
@@ -82,6 +83,8 @@ export default function RentModal() {
                                 <DatePicker
                                     label="End Date"
                                     value={endDate}
+                                    // @ts-ignore
+                                    minDate={startDate}
                                     onChange={(newValue) => handleDateChange(startDate, newValue)}
                                     slotProps={{ textField: { size: 'small' } }}
                                 />
