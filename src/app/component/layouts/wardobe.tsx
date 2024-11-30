@@ -25,7 +25,7 @@ const wardobe = () => {
               </div>
             </a>
             {/* Card 2 */}
-            <a href="detail-catalogue/sasha-dress-greeen">
+            <a href="/detail-catalogue/sasha-dress-greeen">
               <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-64 bg-cover rounded-lg"
@@ -42,7 +42,7 @@ const wardobe = () => {
               </div>
             </a>
             {/* Card 3 */}
-            <a href="detail-catalogue/bonita-dress-pink">
+            <a href="/detail-catalogue/bonita-dress-pink">
               <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-64 bg-cover rounded-lg"
@@ -59,7 +59,7 @@ const wardobe = () => {
               </div>
             </a>
             {/* Card 4 */}
-            <a href="detail-catalogue/leona-dress-rose-gold">
+            <a href="/detail-catalogue/leona-dress-rose-gold">
               <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-64 bg-cover rounded-lg"
@@ -80,7 +80,7 @@ const wardobe = () => {
           {/* Button */}
           <div className="flex items-center justify-center w-full gap-4 h-16 mt-10">
             <a
-              href="#"
+              href="/component/page/catalogue"
               className="flex items-center gap-2 text-xl px-6 py-2 rounded-lg bg-macaronidark text-macaronidark2"
             >
               View All Product
