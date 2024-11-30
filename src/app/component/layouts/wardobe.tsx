@@ -8,64 +8,73 @@ const wardobe = () => {
         <div className="container h-auto w-full mt-10 pt-5 mx-auto items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {/* Card 1 */}
-            <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-              <div
-                className="w-full h-64 bg-cover rounded-lg"
-                style={{
-                  backgroundImage: "url('/img/kanawa.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top",
-                }}
-              ></div>
-              <h2 className="text-black mt-2 font-bold text-lg">
-                Kanawa Dress
-              </h2>
-              <h3 className="text-black mt-1 text-sm">Black</h3>
-            </div>
-
+            <a href="/detail-catalogue/kanawa-dress-black">
+              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+                <div
+                  className="w-full h-64 bg-cover rounded-lg"
+                  style={{
+                    backgroundImage: "url('/img/kanawa.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                  }}
+                ></div>
+                <h2 className="text-black mt-2 font-bold text-lg">
+                  Kanawa Dress
+                </h2>
+                <h3 className="text-black mt-1 text-sm">Black</h3>
+              </div>
+            </a>
             {/* Card 2 */}
-            <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-              <div
-                className="w-full h-64 bg-cover rounded-lg"
-                style={{
-                  backgroundImage: "url('/img/sasha.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top",
-                }}
-              ></div>
-              <h2 className="text-black mt-2 font-bold text-lg">Sasha Dress</h2>
-              <h3 className="text-black mt-1 text-sm">Green</h3>
-            </div>
-
+            <a href="detail-catalogue/sasha-dress-greeen">
+              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+                <div
+                  className="w-full h-64 bg-cover rounded-lg"
+                  style={{
+                    backgroundImage: "url('/img/sasha.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                  }}
+                ></div>
+                <h2 className="text-black mt-2 font-bold text-lg">
+                  Sasha Dress
+                </h2>
+                <h3 className="text-black mt-1 text-sm">Green</h3>
+              </div>
+            </a>
             {/* Card 3 */}
-            <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-              <div
-                className="w-full h-64 bg-cover rounded-lg"
-                style={{
-                  backgroundImage: "url('/img/bonita.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top",
-                }}
-              ></div>
-              <h2 className="text-black mt-2 font-bold text-lg">
-                Bonita Dress
-              </h2>
-              <h3 className="text-black mt-1 text-sm">Pink</h3>
-            </div>
-
+            <a href="detail-catalogue/bonita-dress-pink">
+              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+                <div
+                  className="w-full h-64 bg-cover rounded-lg"
+                  style={{
+                    backgroundImage: "url('/img/bonita.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                  }}
+                ></div>
+                <h2 className="text-black mt-2 font-bold text-lg">
+                  Bonita Dress
+                </h2>
+                <h3 className="text-black mt-1 text-sm">Pink</h3>
+              </div>
+            </a>
             {/* Card 4 */}
-            <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-              <div
-                className="w-full h-64 bg-cover rounded-lg"
-                style={{
-                  backgroundImage: "url('/img/leona.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top",
-                }}
-              ></div>
-              <h2 className="text-black mt-2 font-bold text-lg">Leona Dress</h2>
-              <h3 className="text-black mt-1 text-sm">Wine Gold</h3>
-            </div>
+            <a href="detail-catalogue/leona-dress-rose-gold">
+              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+                <div
+                  className="w-full h-64 bg-cover rounded-lg"
+                  style={{
+                    backgroundImage: "url('/img/leona.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                  }}
+                ></div>
+                <h2 className="text-black mt-2 font-bold text-lg">
+                  Leona Dress
+                </h2>
+                <h3 className="text-black mt-1 text-sm">Wine Gold</h3>
+              </div>
+            </a>
           </div>
 
           {/* Button */}
