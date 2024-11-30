@@ -73,7 +73,7 @@ export default function Navbar() {
             </svg>
           </button>
           <Link
-            href="#"
+            href="/catalogue"
             className="bg-macaronidark font-bold text-white rounded-full px-5 py-2 text-sm shadow-sm hover:bg-macaronidark3"
           >
             RENT NOW
