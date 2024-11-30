@@ -16,9 +16,10 @@ export default function Checkout() {
     (total, item) => total + item.rental * item.quantity, 0
   );
 
-  const [shippingMethod, setShippingMethod] = useState('gosend')
+  const [shippingMethod, setShippingMethod] = useState('paxel')
 
-  const shipping = shippingMethod === 'instant' ? 30000 : (shippingMethod === 'sameday' ? 20000 : (shippingMethod === 'paxel' ? 15000 : 10000));
+  // const shipping = shippingMethod === 'instant' ? 30000 : (shippingMethod === 'sameday' ? 20000 : (shippingMethod === 'paxel' ? 15000 : 10000));
+  const shipping = 30000;
   const deposit = 120000;
   const total = subtotal + shipping + deposit;
 
@@ -129,7 +130,7 @@ export default function Checkout() {
   }, []);
 
   useEffect(() => {
-    if(provinces !== '31') {
+    if (provinces !== '31') {
       setShippingMethod('expedisi')
     } else {
       setShippingMethod('instant')
@@ -161,7 +162,7 @@ export default function Checkout() {
   }
 
   return (
-    <div className="">
+    <div>
       <div className="container py-20 mx-auto grid grid-cols-1 lg:grid-cols-[60%_auto] gap-x-10 gap-y-[32px]">
         <div>
           <form onSubmit={handleSubmit}>
@@ -186,7 +187,7 @@ export default function Checkout() {
                   Nomor KTP
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   required
                   id="ktp"
                   placeholder="Enter your number of identity card"
@@ -214,7 +215,7 @@ export default function Checkout() {
                   Phone
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   required
                   id="phone"
                   placeholder="Enter your phone"
@@ -270,7 +271,7 @@ export default function Checkout() {
                     Postal Code
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     required
                     id="postal"
                     placeholder="Enter Postal Code"
@@ -292,7 +293,7 @@ export default function Checkout() {
                   className="w-full text-macaronidark border border-[#9A9A9A] rounded-md px-5 py-[10px] bg-transparent outline-none text-[14px] lg:text-[20px]"
                 >
                   <option value="" disabled>
-                    Select a Province
+                    Enter Provinces
                   </option>
                   {options.map((province) => (
                     <option key={province.id} value={province.id}>
@@ -302,51 +303,19 @@ export default function Checkout() {
                 </select>
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
-              {["31", "32", "33", "34", "35", "36"].includes(provinces) || provinces == '' ? (
-                <div className="space-y-5 text-macaronidark mt-2">
-                  {["31"].includes(provinces) && 
-                    <>
-                      <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
-                        <div className="grid grid-cols-[100px_auto]">
-                          <div>Instan</div>
-                          <div>(1-4 JAM)</div>
-                        </div>
-                        <div>Rp 30.000</div>
-                      </div>
-                      <div onClick={() => setShippingMethod('sameday')} className={`${shippingMethod === 'sameday' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
-                        <div className="grid grid-cols-[100px_auto]">
-                          <div>Sameday</div>
-                          <div>(4-8 JAM)</div>
-                        </div>
-                        <div>Rp 20.000</div>
-                      </div>
-                      <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
-                        <div className="grid grid-cols-[100px_auto]">
-                          <div>Paxel</div>
-                          <div>(4-10 JAM)</div>
-                        </div>
-                        <div>Rp 15.000</div>
-                      </div>
-                    </>
-                  }
-                  <div onClick={() => setShippingMethod('expedisi')} className={`${shippingMethod === 'expedisi' ? 'bg-macaronilight3' : ''} flex justify-between border border-macaronidark3 cursor-pointer p-4 rounded-md hover:bg-macaronilight3`}>
-                    <div className="grid grid-cols-[100px_auto]">
-                      <div>Ekspedisi </div>
-                      <div>(1-2 Hari)</div>
-                    </div>
-                    <div>Rp 10.000</div>
-                  </div>
+              <div className="flex justify-between gap-5 text-macaronidark mt-5">
+                <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
+                  <div className="font-bold text-xl">Paxel</div>
+                  <div>(Instant Jabodetabek Only)</div>
                 </div>
-              ) : (
-                <div className="mt-5 text-macaronidark">
-                  <p className="text-red-500 font-bold">Sorry, shipping is not available outside Java Island.</p>
+                <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
+                  <div className="font-bold text-xl">Gojek / Grab</div>
+                  <div>(Jakarta Only)</div>
                 </div>
-              )}
-              {["31", "32", "33", "34", "35", "36"].includes(provinces) || provinces == '' ? (
-                <div className="mt-10">
-                  <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
-                </div>
-              ) : (<></>)}
+              </div>
+              <div className="mt-10">
+                <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
+              </div>
             </div>
           </form>
         </div>
