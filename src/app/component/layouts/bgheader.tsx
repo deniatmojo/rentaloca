@@ -7,7 +7,7 @@ const bgheader = () => {
       >
         {/* Container Utama */}
         <div className="container justify-between h-auto max-w-7xl bg-transparent px-5 sm:px-10">
-          <div className="flex flex-col-reverse md:flex-row justify-between items-center h-auto mt-10 md:mt-24">
+          <div className="flex flex-col mt-20 ml-4 md:ml-24 md:flex-row justify-between items-center h-auto md:mt-0">
             {/* Kolom Kiri */}
             <div className="w-full md:w-[616px] mt-5 md:mt-20 flex flex-col items-start">
               <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold font-beautiqueMed text-macaronidark leading-tight">
@@ -30,7 +30,7 @@ const bgheader = () => {
 
             {/* Kolom Kanan */}
             <div
-              className="w-full md:w-[483px] h-[300px] md:h-[630px] bg-cover mt-5 md:mt-0"
+              className="w-full md:w-[483px] h-[300px] md:h-[630px] bg-cover mt-5 md:mt-20"
               style={{ backgroundImage: "url('/img/home1.png')" }}
             ></div>
           </div>

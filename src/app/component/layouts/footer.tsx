@@ -2,7 +2,7 @@ const footer = () => {
   return (
     <div>
       <div
-        className="w-full pt-10"
+        className="w-full flex flx-row justify-center h-[360px] 2xl:w-screen"
         style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
         <div className="container relative flex flex-row mt-20 justify-between w-[1280px] h[216px] gap-[100px]">
@@ -93,6 +93,11 @@ const footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="-mt-[48px] w-full mx-auto flex flx-row justify-center items-center h-[48px]">
+        <h1 className="text-macaronidark3 text-xs font-Inter">
+          © 2024 Rentaloca Private Limited. All Rights Reserved.
+        </h1>
       </div>
     </div>
   );

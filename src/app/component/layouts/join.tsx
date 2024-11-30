@@ -2,13 +2,13 @@ import React from "react";
 
 const join = () => {
   return (
-    <div className="container flex flex-col justify-center mt-20 w-[1280px] h-[578px] mx-auto">
+    <div className="container flex flex-col justify-center mt-20 w-full h-full md:w-[1280px] md:h-[578px] mx-auto">
       <div className="flex items-center justify-center text-6xl mx-auto text-black mt-2">
         <h1 className="text-macaronidark font-beautiqueMed text-6xl mt-0 mx-auto mb-8">
           Join the Fashion Revolution
         </h1>
       </div>
-      <div className="container flex flex-row w-full h-[458px] mt-0 gap-[10px] items-center">
+      <div className="container grid grid-cols-2 md:flex md:flex-row w-full h-[458px] mt-0 gap-[10px] items-center justify-center md:justify-between">
         <div className="flex flex-col w-[305px] h-[432px] justify-center items-center my-auto">
           <img
             className="w-full h-[300px] object-cover rounded-lg"
