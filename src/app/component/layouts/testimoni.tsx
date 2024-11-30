@@ -13,7 +13,10 @@ const Testimoni = () => {
         {/* Kartu Testimoni */}
         <div className="relative w-[300px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
-          <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
+          <div
+            className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/img/sarah_math.PNG')" }}
+          ></div>
 
           {/* Konten Testimoni */}
           <p className="text-left text-xs text-macaronidark pb-2 border-b-2 border-macaronidark -mt-2">
@@ -31,8 +34,10 @@ const Testimoni = () => {
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
-          <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
-
+          <div
+            className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/img/refana.PNG')" }}
+          ></div>
           {/* Konten Testimoni */}
           <p className="text-left text-xs text-macaronidark pb-[22px] border-b-2 border-macaronidark -mt-2">
             Saya sewa dress di sini, modelnya cantik dan elegan banget. Bahannya
@@ -48,7 +53,10 @@ const Testimoni = () => {
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
-          <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
+          <div
+            className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/img/hannan.PNG')" }}
+          ></div>
 
           {/* Konten Testimoni */}
           <p className="text-left text-xs text-macaronidark pb-[37px] border-b-2 border-macaronidark -mt-2">
@@ -65,7 +73,10 @@ const Testimoni = () => {
         </div>
         <div className="relative w-[305px] h-[219px] flex flex-col items-center border-2 bg-macaronilight3 rounded-3xl px-[32px] pt-[56px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
-          <div className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full"></div>
+          <div
+            className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/img/kyara.PNG')" }}
+          ></div>
 
           {/* Konten Testimoni */}
           <p className="text-left text-xs text-macaronidark pb-[36px] border-b-2 border-macaronidark -mt-2">

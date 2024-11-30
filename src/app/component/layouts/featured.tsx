@@ -11,19 +11,19 @@ const Featured = () => {
       </div>
 
       {/* Gambar-gambar Featured */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mt-5">
         <img
-          className="w-full h-[225px] object-cover rounded-lg"
+          className="w-[225px] h-[225px] object-cover rounded-lg"
           src="/img/hegiana.png"
           alt="Designer 1"
         />
         <img
-          className="w-full h-[225px] object-cover rounded-lg"
+          className="w-[225px] h-[225px] object-cover rounded-lg"
           src="/img/emmy.png"
           alt="Designer 2"
         />
         <img
-          className="w-full h-[225px] object-cover rounded-lg"
+          className="w-[225px] h-[225px] object-cover rounded-lg"
           src="/img/djahet.png"
           alt="Designer 3"
         />

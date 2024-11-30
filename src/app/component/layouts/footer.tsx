@@ -83,9 +83,11 @@ const footer = () => {
               <h2 className="text-macaronidark text-xs font-Inter font-bold">
                 COMPANY
               </h2>
-              <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
-                CATALOGUE
-              </h1>
+              <a href="/catalogue">
+                <h1 className="text-macaronidark text-xs font-Inter mt-2 mb-2">
+                  CATALOGUE
+                </h1>
+              </a>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">FAQ</h1>
               <h1 className="text-macaronidark text-xs font-Inter mb-2">
                 HOW IT WORK
