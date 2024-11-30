@@ -55,7 +55,7 @@ const Testimoni = () => {
           {/* Lingkaran Profil */}
           <div
             className="absolute -top-10 left-8 w-[80px] h-[80px] bg-macaronidark rounded-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/img/hannan.PNG')" }}
+            style={{ backgroundImage: "url('/img/hannan.png')" }}
           ></div>
 
           {/* Konten Testimoni */}
