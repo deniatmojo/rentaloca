@@ -303,14 +303,14 @@ export default function Checkout() {
                 </select>
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
-              <div className="flex justify-between gap-5 text-macaronidark mt-5">
+              <div className="flex flex-col lg:flex-row justify-between gap-5 text-macaronidark mt-5">
                 <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
-                  <div className="font-bold text-xl">Paxel</div>
-                  <div>(Instant Jabodetabek Only)</div>
+                  <div className="font-bold text-md lg:text-xl">Paxel</div>
+                  <div className="text-sm">(Instant Jabodetabek Only)</div>
                 </div>
                 <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
-                  <div className="font-bold text-xl">Gojek / Grab</div>
-                  <div>(Jakarta Only)</div>
+                  <div className="font-bold text-md lg:text-xl">Gojek / Grab</div>
+                  <div className="text-sm">(Jakarta Only)</div>
                 </div>
               </div>
               <div className="mt-10">
