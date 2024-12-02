@@ -48,12 +48,10 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${beautiqueBlack.variable} ${beautiqueReg.variable} ${beautiqueMed.variable} antialiased bg-white min-h-screen flex flex-col`}
         >
-            <Navbar />
-              <Cart/>
-              <main className="flex-1">
-                {children}
-              </main>
-            <Footer />
+          <Navbar />
+          <Cart />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </body>
       </CartProvider>
     </html>

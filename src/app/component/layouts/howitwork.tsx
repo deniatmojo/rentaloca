@@ -1,14 +1,14 @@
 const howitwork = () => {
   return (
     <div>
-      <div className="container h-auto w-full mt-40 mx-auto items-center justify-center mb-32 font-Inter">
+      <div className="container h-auto w-full mt-16 md:mt-32 mx-auto items-center justify-center md:mb-20 mb-16 font-Inter md:p-0 px-4">
         {/* Header */}
-        <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-6xl mx-auto font-beautiqueMed text-black mt-0">
+        <div className="flex items-center justify-center text-4xl md:text-6xl mx-auto font-beautiqueMed text-black mt-0">
           <h1>How it Work</h1>
         </div>
 
         {/* Kontainer Utama */}
-        <div className="container flex flex-col sm:flex-row w-full sm:w-[1279px] h-auto mx-auto rounded-sm mt-16 gap-5 sm:gap-[20px]">
+        <div className="container flex flex-col sm:flex-row w-full sm:w-[1279px] h-auto mx-auto rounded-sm md:mt-16 mt-8 gap-5 sm:gap-[20px]">
           {/* Box 1 */}
           <div
             className="w-full sm:w-[413px] h-[300px] bg-cover bg-center rounded-lg overflow-hidden relative shadow-md"

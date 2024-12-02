@@ -1,6 +1,6 @@
 const Lorem = () => {
   return (
-    <div className="container mx-auto mt-10 w-full px-4">
+    <div className="container mx-auto mt-16 w-full px-4">
       {/* Header */}
       <div className="flex items-center justify-center text-black">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl sm:text-5xl lg:text-6xl mt-0 mb-8">
@@ -18,7 +18,7 @@ const Lorem = () => {
               src="/img/larom1.jpg"
               alt="Cleanliness Guaranteed"
             />
-            <div className="absolute bottom-3 px-5">
+            <div className="absolute bottom-8 mt-3 px-5">
               <h1 className="font-bold font-beautiqueBlack text-lg lg:text-xl text-macaronidark mb-2">
                 Cleanliness Guaranteed
               </h1>

@@ -1,8 +1,8 @@
 const faq = () => {
   return (
-    <div className="container max-w-full h-auto mt-24 flex flex-col justify-center items-center mx-auto">
+    <div className="container max-w-full h-auto mt-16 md:mt-20 flex flex-col justify-center items-center mx-auto px-4">
       <div className="container w-full mx-auto text-center">
-        <h1 className="text-macaronidark font-beautiqueMed text-6xl mb-8">
+        <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl mb-8">
           FAQ Rentaloca
         </h1>
       </div>

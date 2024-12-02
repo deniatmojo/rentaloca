@@ -1,75 +1,72 @@
-const wardobe = () => {
+const Wardobe = () => {
   return (
-    <div>
-      <div className="container h-auto w-full mt-10 mx-auto items-center justify-center mb-32 font-beautiqueMed px-4">
-        <div className="flex items-center justify-center text-6xl font-beautiqueMed text-black mt-0">
-          <h1>Rentaloca Wardobe</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="container w-full md:mt-0 mx-auto px-4">
+        <div className="text-center text-4xl md:text-6xl font-beautiqueMed text-black">
+          <h1>Rentaloca Wardrobe</h1>
         </div>
-        <div className="container h-auto w-full mt-10 pt-5 mx-auto items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="container h-auto mt-5 md:mt-10 pt-5">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-2 justify-center items-center">
             {/* Card 1 */}
             <a href="/detail-catalogue/kanawa-dress-black">
-              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
-                  className="w-full h-64 bg-cover rounded-lg"
+                  className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
                     backgroundImage: "url('/img/kanawa.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "top",
                   }}
                 ></div>
-                <h2 className="text-black mt-2 font-bold text-lg">
+                <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Kanawa Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Black</h3>
               </div>
             </a>
-            {/* Card 2 */}
-            <a href="/detail-catalogue/sasha-dress-greeen">
-              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+            <a href="/detail-catalogue/sasha-dress-green">
+              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
-                  className="w-full h-64 bg-cover rounded-lg"
+                  className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
                     backgroundImage: "url('/img/sasha.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "top",
                   }}
                 ></div>
-                <h2 className="text-black mt-2 font-bold text-lg">
+                <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Sasha Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Green</h3>
               </div>
             </a>
-            {/* Card 3 */}
             <a href="/detail-catalogue/bonita-dress-pink">
-              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
-                  className="w-full h-64 bg-cover rounded-lg"
+                  className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
                     backgroundImage: "url('/img/bonita.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "top",
                   }}
                 ></div>
-                <h2 className="text-black mt-2 font-bold text-lg">
+                <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Bonita Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Pink</h3>
               </div>
             </a>
-            {/* Card 4 */}
             <a href="/detail-catalogue/leona-dress-rose-gold">
-              <div className="flex items-center px-4 py-4 flex-col bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
-                  className="w-full h-64 bg-cover rounded-lg"
+                  className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
                     backgroundImage: "url('/img/leona.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "top",
                   }}
                 ></div>
-                <h2 className="text-black mt-2 font-bold text-lg">
+                <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Leona Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Wine Gold</h3>
@@ -78,7 +75,7 @@ const wardobe = () => {
           </div>
 
           {/* Button */}
-          <div className="flex items-center justify-center w-full gap-4 h-16 mt-10">
+          <div className="flex items-center justify-center w-full gap-4 h-16 md:mt-10 mt-5">
             <a
               href="/component/page/catalogue"
               className="flex items-center gap-2 text-xl px-6 py-2 rounded-lg bg-macaronidark text-macaronidark2"
@@ -104,4 +101,4 @@ const wardobe = () => {
   );
 };
 
-export default wardobe;
+export default Wardobe;
