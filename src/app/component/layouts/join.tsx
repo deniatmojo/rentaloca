@@ -2,13 +2,13 @@ import React from "react";
 
 const join = () => {
   return (
-    <div className="container flex flex-col justify-center mt-20 w-full h-full md:w-[1280px] md:h-[578px] mx-auto">
+    <div className="container flex flex-col justify-center mt-20 w-full h-full mx-auto">
       <div className="flex w-[300px] md:w-full items-center justify-center mx-auto text-black">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl text-center mt-0 mx-auto mb-8">
           Join The Fashion Revolution
         </h1>
       </div>
-      <div className="container grid grid-cols-2 md:flex md:flex-row md:w-full w-[480px] h-[458px] mt-4 md:gap-[10px] items-center justify-center md:justify-between mx-auto">
+      <div className="container flex flex-wrap md:flex-nowrap md:w-full w-[480px] h-[458px] mt-4 px-2 md:gap-[10px] items-center justify-center md:justify-between mx-auto">
         <div className="flex flex-col md:w-[305px] md:h-[432px] w-[230px] h-[250px] justify-center items-center">
           <img
             className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
@@ -57,7 +57,7 @@ const join = () => {
         <div className="flex flex-col md:w-[305px] md:h-[432px] w-[230px] h-[250px] justify-center items-center">
           <img
             className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
-            src="/img/frame6.png"
+            src="/img/frame9.png"
           ></img>
           <h2 className="text-black mt-5 font-bold md:text-lg text-sm font-beautiqueMed">
             Smart Wardrobe

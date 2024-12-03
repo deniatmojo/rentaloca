@@ -8,7 +8,7 @@ const howitwork = () => {
         </div>
 
         {/* Kontainer Utama */}
-        <div className="container flex flex-col sm:flex-row w-full sm:w-[1279px] h-auto mx-auto rounded-sm md:mt-16 mt-8 gap-5 sm:gap-[20px]">
+        <div className="container flex flex-col sm:flex-row w-full h-auto mx-auto px-2 rounded-sm md:mt-16 mt-8 gap-4 md:gap-[10px]">
           {/* Box 1 */}
           <div
             className="w-full sm:w-[413px] h-[300px] bg-cover bg-center rounded-lg overflow-hidden relative shadow-md"

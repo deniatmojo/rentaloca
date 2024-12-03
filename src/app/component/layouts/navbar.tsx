@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* Tombol Kanan */}
-        <div className="flex items-center space-x-4 -mr-24 md:mr-0">
+        <div className="hidden md:flex items-center space-x-4 -mr-24 md:mr-0">
           <button
             onClick={toggleCart}
             className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full md:p-3 p-2  shadow-sm  hover:bg-macaronidark3"
@@ -100,7 +100,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-20 right-0 bg-white w-64 py-4 px-6 rounded-lg shadow-md">
+          <div className="md:hidden absolute top-16 right-2 bg-macaronilight3 w-48 py-4 px-3 rounded-lg shadow-md">
             <div className="space-y-4">
               <Link href="/home" className="text-macaronidark block">
                 Home

@@ -2,14 +2,14 @@ import React from "react";
 
 const Testimoni = () => {
   return (
-    <div className="container flex flex-col justify-center items-center md:mt-20 mt-10 w-full md:w-[1280px] h-full mx-auto">
+    <div className="container flex flex-col justify-center items-center md:mt-20 mt-10 w-full h-full mx-auto">
       {/* Judul */}
       <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl text-center mb-8">
         Style with Rentaloca
       </h1>
 
       {/* Kontainer Testimoni */}
-      <div className="grid grid-cols-2 md:flex md:flex-row justify-center items-center gap-2 px-0 mt-8">
+      <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-2 px-0 mt-8">
         {/* Kartu Testimoni */}
         <div className="relative md:w-[300px] md:h-[219px] w-[230px] h-[190px] flex flex-col items-center border-2 bg-macaronilight3 md:rounded-3xl rounded-xl md:px-[32px] md:pt-[56px] px-[8px] pt-[35px] pb-[24px] gap-[1px]">
           {/* Lingkaran Profil */}
@@ -28,10 +28,10 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <div className="absolute -bottom-3 left-2 md:left-8 border-t-2 w-[200px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-sm">
+            <h1 className="mt-1 text-left w-full md:text-md text-sm text-macaronidark">
               Sarah Math
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm text-macaronidark">
               Graduation Testimoni
             </h1>
           </div>
@@ -51,10 +51,10 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[200px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-sm">
+            <h1 className="mt-1 text-left w-full md:text-md text-sm text-macaronidark">
               Refanda Sutargo
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm text-macaronidark">
               Kondangan Testimoni
             </h1>
           </div>
@@ -74,10 +74,10 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[200px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-sm">
+            <h1 className="mt-1 text-left w-full md:text-md text-sm text-macaronidark">
               Hannan Cinthya
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm text-macaronidark">
               Kondangan Testimoni
             </h1>
           </div>
@@ -97,10 +97,10 @@ const Testimoni = () => {
 
           {/* Nama dan Perusahaan, rata kanan */}
           <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[200px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-sm">
+            <h1 className="mt-1 text-left w-full md:text-md text-sm text-macaronidark">
               Kyara Octora
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-sm text-macaronidark">
               Occasional Testimoni
             </h1>
           </div>
