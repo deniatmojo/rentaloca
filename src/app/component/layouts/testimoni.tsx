@@ -27,11 +27,11 @@ const Testimoni = () => {
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <div className="absolute -bottom-3 left-2 md:left-8 border-t-2 w-[140px] md:w-[250px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-[12px] text-macaronidark">
+          <div className="absolute -bottom-3 md:-bottom-2 left-2 md:left-8 border-t-2 w-[140px] md:w-[250px] border-macaronidark">
+            <h1 className="mt-1 text-left w-full md:text-md md:font-bold text-[12px] text-macaronidark">
               Sarah Math
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-[12px] text-macaronidark">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md md:font-bold text-[12px] text-macaronidark">
               Graduation Testimoni
             </h1>
           </div>
@@ -50,11 +50,11 @@ const Testimoni = () => {
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-[12px] text-macaronidark">
+          <div className="absolute -bottom-3 md:-bottom-2 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
+            <h1 className="mt-1 text-left w-full md:text-md md:font-bold text-[12px] text-macaronidark">
               Refanda Sutargo
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-[12px] text-macaronidark">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:font-bold md:text-md text-[12px] text-macaronidark">
               Kondangan Testimoni
             </h1>
           </div>
@@ -73,11 +73,11 @@ const Testimoni = () => {
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-[12px] text-macaronidark">
+          <div className="absolute -bottom-3 md:-bottom-2 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
+            <h1 className="mt-1 text-left w-full md:text-md md:font-bold text-[12px] text-macaronidark">
               Hannan Cinthya
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-[12px] text-macaronidark">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:font-bold md:text-md text-[12px] text-macaronidark">
               Kondangan Testimoni
             </h1>
           </div>
@@ -96,11 +96,11 @@ const Testimoni = () => {
           </p>
 
           {/* Nama dan Perusahaan, rata kanan */}
-          <div className="absolute -bottom-3 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
-            <h1 className="mt-1 text-left w-full md:text-md text-[12px] text-macaronidark">
+          <div className="absolute -bottom-3 md:-bottom-2 left-2 border-t-2 md:left-8 w-[140px] md:w-[250px] border-macaronidark">
+            <h1 className="mt-1 text-left w-full md:text-md md:font-bold text-[12px] text-macaronidark">
               Kyara Octora
             </h1>
-            <h1 className="mb-3 -mt-[6px] text-left w-full md:text-md text-[12px] text-macaronidark">
+            <h1 className="mb-3 -mt-[6px] text-left w-full md:font-bold md:text-md text-[12px] text-macaronidark">
               Occasional Testimoni
             </h1>
           </div>

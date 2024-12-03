@@ -9,7 +9,7 @@ const Wardobe = () => {
           <div className="flex flex-col md:flex-row gap-2 md:gap-2 justify-center items-center">
             {/* Card 1 */}
             <a href="/detail-catalogue/kanawa-dress-black">
-              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
@@ -25,7 +25,7 @@ const Wardobe = () => {
               </div>
             </a>
             <a href="/detail-catalogue/sasha-dress-green">
-              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
@@ -41,7 +41,7 @@ const Wardobe = () => {
               </div>
             </a>
             <a href="/detail-catalogue/bonita-dress-pink">
-              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
@@ -57,7 +57,7 @@ const Wardobe = () => {
               </div>
             </a>
             <a href="/detail-catalogue/leona-dress-rose-gold">
-              <div className="w-[333px] h-[540px] md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-[432px] bg-cover rounded-lg"
                   style={{
