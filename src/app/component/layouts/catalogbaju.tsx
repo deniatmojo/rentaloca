@@ -181,9 +181,9 @@ const Catalogbaju = () => {
   };
 
   return (
-    <div className="container flex flex-row justify-between relative w-[1280px] h-full mt-20 mx-auto gap-5">
-      <div className="container w-[185px] h-[250px]">
-        <h1 className="text-macaronidark font-Inter w-full text-2xl mb-8 border-b-2 border-macaronidark">
+    <div className="container flex flex-wrap md:flex-nowrap md:justify-between relative w-full h-full md:mt-20 mt-10 mx-auto gap-5 md:px-10">
+      <div className="container md:w-[185px] md:h-[250px] w-full h-full md:px-0 px-8">
+        <h1 className="text-macaronidark font-Inter w-full text-2xl md:mb-8 mb-4 border-b-2 border-macaronidark">
           FILTER
         </h1>
         <div className="w-full h-[40px] border-macaronidark flex items-center justify-between">
@@ -222,8 +222,8 @@ const Catalogbaju = () => {
           <span className="text-macaronidark text-sm">Unavailable</span>
         </label>
       </div>
-      <div className="container w-[1063px] h-full mt-0 flex flex-col ">
-        <div className="flex flex-row items-center justify-between">
+      <div className="container w-full h-full mt-0 flex md:flex-col flex-wrap mb-16">
+        <div className="flex w-full flex-row items-center justify-between px-8 md:mb-0 mb-4">
           <div className="flex items-center">
             <h1 className="text-macaronidark font-Inter text-sm mr-2">
               Sort by:
@@ -243,7 +243,7 @@ const Catalogbaju = () => {
             {filteredAndSortedItems.length !== 1 ? "s" : ""}
           </label>
         </div>
-        <div className="grid grid-cols-3 w-full mt-4 gap-4 justify-between">
+        <div className="md:grid md:grid-cols-3 flex flex-wrap w-full px-9 md:px-0 mt-4 gap-4 md:justify-between justify-center">
           {filteredAndSortedItems.map((item, index) => (
             <ClothingCard
               key={index}

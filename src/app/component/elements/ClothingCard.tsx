@@ -10,13 +10,15 @@ interface ClothingCardProps {
 const ClothingCard = ({ name, image, price, link }: ClothingCardProps) => {
   return (
     <a href={link}>
-      <div className="flex flex-col h-[481px]">
+      <div className="flex flex-col md:h-[481px] h-auto w-full">
         <img
-          className="w-[333px] h-[405px] rounded-md object-cover"
+          className="md:w-[333px] md:h-[405px] w-[333px] h-[460px] md:rounded-md rounded-xl object-cover"
           src={image}
           alt={name}
         />
-        <h2 className="text-black font-beautiqueMed mt-1 text-lg">{name}</h2>
+        <h2 className="text-black font-beautiqueMed md:mt-1 mt-2 text-lg">
+          {name}
+        </h2>
         <h3 className="text-black font-Inter mt-1 mb-2 text-sm">Rp. {price}</h3>
       </div>
     </a>
