@@ -1,12 +1,12 @@
 const faq = () => {
   return (
-    <div className="container max-w-full h-auto mt-16 md:mt-20 flex flex-col justify-center items-center mx-auto px-4">
+    <div className="container max-w-full h-auto mt-12 md:mt-20 flex flex-col justify-center items-center mx-auto px-4">
       <div className="container w-full mx-auto text-center">
-        <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl mb-8">
+        <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl md:mb-8 mb-4">
           FAQ Rentaloca
         </h1>
       </div>
-      <div className="container w-full h-[688px] flex flex-col items-center">
+      <div className="container w-full h-auto flex flex-col items-center mb-16 md:mb-24">
         <div className="container w-full h-[40px] border-b border-macaronidark flex items-center justify-between">
           <h1 className="text-macaronidark font-Inter text-sm">
             What is Rentaloca Indonesia?

@@ -2,7 +2,7 @@ import React from "react";
 
 const Featured = () => {
   return (
-    <div className="container mx-auto mt-20 w-full px-4">
+    <div className="container mx-auto md:mt-20 mt-12 w-full px-4">
       {/* Header */}
       <div className="flex items-center justify-center text-black">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl text-center mb-8">

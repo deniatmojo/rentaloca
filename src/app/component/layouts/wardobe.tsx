@@ -5,7 +5,7 @@ const Wardobe = () => {
         <div className="text-center text-4xl md:text-6xl font-beautiqueMed text-black">
           <h1>Rentaloca Wardrobe</h1>
         </div>
-        <div className="container h-auto mt-5 md:mt-10 pt-5">
+        <div className="container h-auto mt-2 md:mt-10 pt-5">
           <div className="flex flex-col md:flex-row gap-2 md:gap-2 justify-center items-center">
             {/* Card 1 */}
             <a href="/detail-catalogue/kanawa-dress-black">

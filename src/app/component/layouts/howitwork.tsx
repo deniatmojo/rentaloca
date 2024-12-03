@@ -1,7 +1,7 @@
 const howitwork = () => {
   return (
     <div>
-      <div className="container h-auto w-full mt-16 md:mt-32 mx-auto items-center justify-center md:mb-20 mb-16 font-Inter md:p-0 px-4">
+      <div className="container h-auto w-full mt-16 md:mt-32 mx-auto items-center justify-center md:mb-20 mb-14 font-Inter md:p-0 px-4">
         {/* Header */}
         <div className="flex items-center justify-center text-4xl md:text-6xl mx-auto font-beautiqueMed text-black mt-0">
           <h1>How it Work</h1>

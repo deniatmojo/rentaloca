@@ -1,6 +1,6 @@
 const featuredon = () => {
   return (
-    <div className="container flex flex-col justify-center mt-16 md:mt-20 w-full mx-auto px-4">
+    <div className="container flex flex-col justify-center mt-12 md:mt-20 w-full mx-auto px-4">
       {/* Header */}
       <div className="flex items-center justify-center mx-auto text-black mt-2">
         <h1 className="text-macaronidark font-beautiqueMed md:text-6xl text-4xl mt-0 mx-auto mb-8">
