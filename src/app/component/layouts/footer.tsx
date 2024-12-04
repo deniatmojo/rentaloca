@@ -22,7 +22,7 @@ const footer = () => {
                 rentals.
               </p>
               <div className="flex gap-[10px] mt-5">
-                <a href="#" className="">
+                <a href="https://www.instagram.com/rentaloca.id" target="_blank" className="">
                   <svg
                     width="20"
                     height="21"
@@ -36,7 +36,7 @@ const footer = () => {
                     />
                   </svg>
                 </a>
-                <a href="#" className="">
+                <a href="https://www.tiktok.com/@rentaloca.id" target="_blank" className="">
                   <svg
                     width="20"
                     height="22"
@@ -91,10 +91,14 @@ const footer = () => {
                   </h1>
                 </a>
                 <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                  FAQ
+                  <a href="#faq" >
+                      FAQ
+                  </a>
                 </h1>
                 <h1 className="text-macaronidark text-xs font-Inter mb-2">
-                  HOW IT WORK
+                  <a href="#howitwork">
+                      HOW IT WORK
+                  </a>
                 </h1>
               </div>
             </div>

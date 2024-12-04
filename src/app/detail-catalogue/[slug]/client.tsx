@@ -22,7 +22,7 @@ export default function ClientPage({
     const [fotoMain, setFotoMain] = useState(params.foto.main)
 
     return (
-        <div className={`${inter.className} my-[100px]`}>
+        <div className={`${inter.className} py-[100px] lg:bg-white bg-gradient-to-r bg-[#FEFAF3] via-[#FBF0DA] to-[#FEFAF3]`}>
             <div className={`container h-full mx-auto text-macaronidark px-5 grid md:grid-cols-2 grid-cols-1 gap-y-10`}>
                 <div className="flex flex-col items-center">
                     <div className="mb-4 w-full md:w-[300px] lg:w-[400px]">

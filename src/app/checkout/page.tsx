@@ -162,7 +162,7 @@ export default function Checkout() {
   }
 
   return (
-    <div>
+    <div className="bg-gradient-to-r bg-[#FEFAF3] via-[#FBF0DA] to-[#FEFAF3]">
       <div className="container py-20 mx-auto grid grid-cols-1 lg:grid-cols-[60%_auto] gap-x-10 gap-y-[32px]">
         <div>
           <form onSubmit={handleSubmit}>

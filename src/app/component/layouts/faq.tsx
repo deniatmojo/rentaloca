@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="container max-w-full h-auto mt-[64px] md:mt-[128px] flex flex-col justify-center items-center mx-auto px-4">
+    <div id="faq" className="container max-w-full h-auto mt-[64px] md:mt-[128px] flex flex-col justify-center items-center mx-auto px-4">
       <div className="container w-full mx-auto text-center">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl md:mb-8 mb-4">
           FAQ Rentaloca

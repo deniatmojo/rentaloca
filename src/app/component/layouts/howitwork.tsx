@@ -1,6 +1,6 @@
 const howitwork = () => {
   return (
-    <div>
+    <div id="howitwork">
       <div className="container h-auto w-full md:mt-[124px] mt-[64px] mx-auto items-center justify-center font-Inter md:px-2 px-4">
         {/* Header */}
         <div className="flex items-center justify-center text-4xl md:text-6xl mx-auto font-beautiqueMed text-black mt-0">

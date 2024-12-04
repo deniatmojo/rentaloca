@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import formatRupiah from "@/function/formatRupiah";
+import { getSheetData } from "@/server/get-data";
 
 function getRandomProducts(products: any, count = 4) {
     const shuffled = [...products].sort(() => 0.5 - Math.random());
@@ -15,9 +16,47 @@ export default function Also( {data} : {data: any}) {
     useEffect(() => {
         async function fetchProducts() {
             try {
-                const response = await fetch("/data/product.json");
-                let products = await response.json();
-                products = products.filter((product: { slug: any; }) => product.slug !== data.slug);
+                const response = await getSheetData();
+                const parsePrice = (price: string) => price ? parseInt(price.replace(/[^\d]/g, ""), 10) : null;
+                const checkValue = (value: string) => (value?.trim() === "" ? null : value.trim());
+                const dataSpreadsheet = response?.data?.map((val, index) => {
+                    return {
+                        id: val[0],
+                        name: val[1],
+                        slug: val[23],
+                        available: parseInt(val[8], 10) !== 0,
+                        foto: {
+                            main: val[24]?.trim(),
+                            ...(val[25] ? { thumbnail1: val[25].trim() } : {}),
+                            ...(val[26] ? { thumbnail2: val[26].trim() } : {}),
+                            ...(val[27] ? { thumbnail3: val[27].trim() } : {}),
+                        },
+                        size: (() => {
+                            const sizeMap: any = { 3: "S", 4: "M", 5: "L", 6: "XL", 7: "S" };
+                            for (let i = 3; i <= 7; i++) {
+                                if (val[i]?.trim() === "X") {
+                                    return sizeMap[i];
+                                }
+                            }
+                            return null;
+                        })(),
+                        quantity: parseInt(val[8], 10),
+                        bust: checkValue(val[9]),
+                        waist: checkValue(val[10]),
+                        hip: checkValue(val[11]),
+                        length: checkValue(val[12]),
+                        sleeves: checkValue(val[13]),
+                        abdomen: checkValue(val[14]),
+                        suggested_weight: checkValue(val[15]),
+                        shoulders: checkValue(val[16]),
+                        bahan: val[17]?.trim(),
+                        retail_price: parsePrice(val[18]),
+                        rental: parsePrice(val[19]),
+                        discount: parsePrice(val[20]),
+                        note: val[21]?.trim(),
+                    };
+                }) ?? []
+                const products = dataSpreadsheet.filter((product: { slug: any; }) => product.slug !== data.slug);
                 const randomItems = getRandomProducts(products);
                 setRandomProducts(randomItems);
             } catch (error) {

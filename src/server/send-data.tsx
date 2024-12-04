@@ -1,15 +1,6 @@
 "use server"
 import { getSheetData } from './google-sheets';
 
-type formData = {
-    firstName: string,
-    lastName: string,
-    email: string,
-    phone: string,
-    services: string,
-    message: string
-}
-
 export async function sendData(data: any) {
     try {
         const auth = await getSheetData();
