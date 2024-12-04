@@ -1,6 +1,6 @@
 const Lorem = () => {
   return (
-    <div className="container mx-auto md:mt-16 mt-12 w-full px-4">
+    <div className="container mx-auto md:mt-[128px] mt-[64px] w-full px-4">
       {/* Header */}
       <div className="flex items-center justify-center text-black mx-auto">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl text-center sm:text-5xl lg:text-6xl mt-0 mb-8">
@@ -9,7 +9,7 @@ const Lorem = () => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap items-center justify-center mt-[32px] md:mt-[48px] md:gap-[20px] gap-[16px]">
         {/* Card 1 */}
         <div className="w-full sm:w-[48%] bg-macaronilight3 rounded-lg overflow-hidden">
           <div className="relative w-full h-[455px]">

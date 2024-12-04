@@ -2,14 +2,14 @@ import React from "react";
 
 const join = () => {
   return (
-    <div className="container flex flex-col justify-center items-center md:mt-20 mt-12 w-full h-full mx-auto">
+    <div className="container flex flex-col justify-center items-center md:mt-[128px] mt-[64px] w-full h-full mx-auto">
       <div className="flex w-[300px] md:w-full items-center justify-center text-black">
-        <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl text-center mt-0 mx-auto mb-0 md:mb-4">
+        <h1 className="text-macaronidark font-beautiqueMed w-[160px] md:w-full text-4xl md:text-6xl text-center mx-auto">
           Join The Fashion Revolution
         </h1>
       </div>
-      <div className="flex flex-wrap md:flex-nowrap md:w-full w-full gap-0 h-full md:mt-4 mt-5 px-2 md:gap-[10px] items-center justify-center">
-        <div className="flex flex-col md:w-[305px] md:h-[432px] w-[165px] h-[250px] justify-center items-center">
+      <div className="flex flex-wrap md:flex-nowrap md:w-full w-full gap-4 h-full md:mt-[48px] mt-[32px] px-2 md:gap-[10px] items-center justify-center">
+        <div className="flex flex-col md:w-[305px] md:h-full w-[165px] h-[250px] justify-center items-center">
           <img
             className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
             src="/img/frame6.png"
@@ -24,7 +24,7 @@ const join = () => {
             Designer Pieces In XS To L.
           </h3>
         </div>
-        <div className="flex flex-col md:w-[305px] md:h-[432px] w-[165px] h-[250px] justify-center items-center">
+        <div className="flex flex-col md:w-[305px] md:h-full w-[165px] h-[250px] justify-center items-center">
           <img
             className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
             src="/img/frame8.png"
@@ -39,9 +39,9 @@ const join = () => {
             Commitment
           </h3>
         </div>
-        <div className="flex flex-col md:w-[305px] md:h-[432px] w-[165px] h-[250px] justify-center items-center">
+        <div className="flex flex-col md:w-[305px] md:h-full w-[165px] h-[250px] justify-center items-center">
           <img
-            className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
+            className="md:w-[305px] md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
             src="/img/frame7.png"
           ></img>
           <h2 className="text-black mt-5 font-bold md:text-lg text-xs font-beautiqueMed">
@@ -54,7 +54,7 @@ const join = () => {
             To Your Measurements.
           </h3>
         </div>
-        <div className="flex flex-col md:w-[305px] md:h-[432px] w-[165px] h-[250px] justify-center items-center">
+        <div className="flex flex-col md:w-[305px] md:h-full w-[165px] h-[250px] justify-center items-center">
           <img
             className="md:w-full md:h-[300px] w-[161px] h-[158px] object-cover rounded-lg"
             src="/img/frame9.png"

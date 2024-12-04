@@ -5,7 +5,7 @@ const footer = () => {
         className="w-full pt-10 bg-macaronilight3"
         // style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
-        <div className="container mx-auto px-8 lg:px-3">
+        <div className="container mx-auto px-4 md:px-0">
           <div className="relative flex flex-col lg:flex-row lg:justify-between gap-x-24 gap-y-10">
             <div className="flex flex-col relative">
               <a
@@ -14,7 +14,12 @@ const footer = () => {
                 style={{ backgroundImage: "url('/img/rentaloca.png')" }}
               ></a>
               <p className="text-sm text-macaronidark leading-relaxed max-w-2xl text-pretty">
-                Rentaloca Indonesia is a technology platform and a revolutionary business model for the fashion authority that addresses all of the problems with borrowing clotes and will be able to acces thousands of outfits of designers and local clothing brands in Indonesia throught Subscription-bases renting and one time rentals.
+                Rentaloca Indonesia is a technology platform and a revolutionary
+                business model for the fashion authority that addresses all of
+                the problems with borrowing clotes and will be able to acces
+                thousands of outfits of designers and local clothing brands in
+                Indonesia throught Subscription-bases renting and one time
+                rentals.
               </p>
               <div className="flex gap-[10px] mt-5">
                 <a href="#" className="">
@@ -85,7 +90,9 @@ const footer = () => {
                     CATALOGUE
                   </h1>
                 </a>
-                <h1 className="text-macaronidark text-xs font-Inter mb-2">FAQ</h1>
+                <h1 className="text-macaronidark text-xs font-Inter mb-2">
+                  FAQ
+                </h1>
                 <h1 className="text-macaronidark text-xs font-Inter mb-2">
                   HOW IT WORK
                 </h1>

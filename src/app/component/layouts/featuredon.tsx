@@ -1,6 +1,6 @@
 const featuredon = () => {
   return (
-    <div className="container flex flex-col justify-center mt-12 md:mt-20 w-full mx-auto px-4">
+    <div className="container flex flex-col justify-center mt-[64px] md:mt-[128px] w-full mx-auto px-4">
       {/* Header */}
       <div className="flex items-center justify-center mx-auto text-black mt-2">
         <h1 className="text-macaronidark font-beautiqueMed md:text-6xl text-4xl mt-0 mx-auto mb-8">
@@ -9,7 +9,7 @@ const featuredon = () => {
       </div>
 
       {/* Kontainer Gambar */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-[30px] w-full mt-0 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-[30px] w-full mt-[32px] md:mt-[48px] justify-center">
         <img
           className="h-[225px] w-[225px] object-cover mx-auto"
           src="/img/featuredon1.jpg"

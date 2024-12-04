@@ -1,15 +1,15 @@
 const Wardobe = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <div className="container w-full md:mt-0 mx-auto px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center mt-[64px] md:mt-[124px]">
+      <div className="container w-full mx-auto px-4">
         <div className="text-center text-4xl md:text-6xl font-beautiqueMed text-black">
           <h1>Rentaloca Wardrobe</h1>
         </div>
-        <div className="container h-auto mt-2 md:mt-10 pt-5">
-          <div className="flex flex-col md:flex-row gap-2 md:gap-2 justify-center items-center">
+        <div className="container h-auto mt-[32px] md:mt-[48px] pt-5">
+          <div className="flex flex-col md:flex-row gap-[16px] md:gap-3 justify-center items-center">
             {/* Card 1 */}
             <a href="/detail-catalogue/kanawa-dress-black">
-              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
+              <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center p-[14px] bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
                 <div
                   className="w-full h-[432px] bg-cover rounded-lg"
                   style={{

@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(date-picker|button|ripple|spinner|calendar|date-input|popover).{js,ts,jsx,tsx}"
+    "./node_modules/@nextui-org/theme/dist/components/(date-picker|button|ripple|spinner|calendar|date-input|popover).{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -19,6 +19,7 @@ const config: Config = {
         macaronilight: "#fefaf3",
         macaronilight2: "#F2CD87",
         macaronilight3: "#F7DFB1",
+        macaronilight4: "#FBF0DA",
         grayborder: "#e5e7eb",
       },
       fontFamily: {

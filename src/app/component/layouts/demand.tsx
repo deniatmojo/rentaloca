@@ -2,7 +2,7 @@ import React from "react";
 
 const demand = () => {
   return (
-    <div className="container md:mt-16 mt-12 flex flex-col md:flex-row items-center justify-center w-full mx-auto px-4 gap-4">
+    <div className="container md:mt-[128px] mt-[64px] flex flex-col md:flex-row items-center justify-center w-full mx-auto px-4 md:gap-4 gap-[32px]">
       {/* Gambar */}
       <img
         className="w-full md:w-1/2 h-[476px] rounded-lg object-cover object-top shadow-md"
