@@ -28,7 +28,7 @@ export async function sendData(data: any) {
                     data.nomor_ktp,
                     data.email,
                     data.phone,
-                    data.bank_deposit,
+                    "-",
                     data.address,
                     data.city,
                     data.postal_code,
