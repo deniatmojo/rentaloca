@@ -103,7 +103,7 @@ export default function Checkout() {
         shippingMethod
       )}%0APesanan%20Sewa%3A%0A${ordersText}`;
 
-      const phoneNumber = "+6282130085657";
+      const phoneNumber = "+628566660999";
       const waLink = `https://api.whatsapp.com/send?phone=${encodeURIComponent(
         phoneNumber
       )}&text=${message}`;
