@@ -245,7 +245,7 @@ const Catalogbaju = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-center mt-6 space-x-2">
+        <div className="flex items-center justify-center mt-6 space-x-2 mx-auto">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
