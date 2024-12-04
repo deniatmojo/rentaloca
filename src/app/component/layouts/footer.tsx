@@ -5,7 +5,7 @@ const footer = () => {
         className="w-full pt-10 bg-macaronilight3"
         // style={{ backgroundImage: "url('/img/bgfooter.png')" }}
       >
-        <div className="container mx-auto px-4 md:px-0">
+        <div className="container mx-auto px-4 md:px-4">
           <div className="relative flex flex-col lg:flex-row lg:justify-between gap-x-24 gap-y-10">
             <div className="flex flex-col relative">
               <a

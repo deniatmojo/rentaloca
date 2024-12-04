@@ -7,7 +7,7 @@ const bgheader = () => {
       >
         {/* Container Utama */}
         <div className="container justify-between h-auto max-w-7xl bg-transparent px-5 sm:px-10">
-          <div className="flex flex-col mt-20 ml-4 md:ml-24 md:flex-row justify-between items-center h-auto md:mt-0">
+          <div className="flex flex-col mt-20 ml-4 md:ml-0 md:flex-row justify-between items-center h-auto md:mt-0">
             {/* Kolom Kiri */}
             <div className="w-full md:w-[616px] mt-5 md:mt-20 flex flex-col items-start">
               <h1 className="text-4xl text-center md:text-left md:text-6xl font-bold font-beautiqueMed text-macaronidark leading-tight mx-auto">

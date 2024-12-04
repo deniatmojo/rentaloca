@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* Tombol Kanan */}
-        <div className="hidden md:flex items-center space-x-4 -mr-24 md:mr-0">
+        <div className="hidden md:flex items-center space-x-4 -mr-24 md:mr-0 pr-5">
           <button
             onClick={toggleCart}
             className="inline-flex items-center justify-center bg-macaronidark text-white rounded-full md:p-3 p-2  shadow-sm  hover:bg-macaronidark3"
