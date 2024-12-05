@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import ReactDOMServer from "react-dom/server";
 
 type FAQItem = {
   question: string;
@@ -16,18 +17,26 @@ const FAQ: React.FC = () => {
     },
     {
       question: "How To Rent?",
-      answer:
-        "Check the catalog at www.rentaloca.id or consult the availability of your favorite dress on the desired date via WhatsApp Business of Rentaloca Indonesia admin WA (0856-6660-999). FIRST PAY FIRST GET, The fastest payment will be processed directly by the admin.",
+      answer: ReactDOMServer.renderToString(
+        <>
+          Check the catalog at www.rentaloca.id or consult the availability of
+          your favorite dress on the desired date via WhatsApp Business of
+          Rentaloca Indonesia admin WA (0856-6660-999).
+          <br />
+          <span className="font-bold mt-1">FIRST PAY FIRST GET,</span> The
+          fastest payment will be processed directly by the admin.
+        </>
+      ),
     },
     {
       question: "How long can I rent the Rentaloca Indonesia item?",
       answer:
-        "• The price listed is the price per 3 days. The price is non-negotiable.\n• If the rental is more than 3 days, an additional fee will be charged according to the extra day price for the first day.\n• The rental period days are counted from when the clothes are received by the renter until the clothes are received by us.\n• If you want to change the rental date, you must notify the admin at least H-3 days before the delivery date.\n• If you want to exchange/change the dress, it can be done at least 1 week before the delivery date.",
+        "The price listed is the price per 3 days. The price is non-negotiable.\n If the rental is more than 3 days, an additional fee will be charged according to the extra day price for the first day.\n The rental period days are counted from when the clothes are received by the renter until the clothes are received by us.\n If you want to change the rental date, you must notify the admin at least H-3 days before the delivery date.\n If you want to exchange/change the dress, it can be done at least 1 week before the delivery date.",
     },
     {
       question: "Do I need to pay a deposit?",
       answer:
-        "Yes, you have to pay including a deposit, because it is a guarantee of the rental.\n• Deposit fee starts from IDR 100,000 to IDR 250,000, adjusted to the rental price of the clothes.\n• Deposit will be returned 100% after we receive the goods in good condition, with a process of 1x24 hours.",
+        "Yes, you have to pay including a deposit, because it is a guarantee of the rental.\n Deposit fee starts from IDR 100,000 to IDR 250,000, adjusted to the rental price of the clothes.\n Deposit will be returned 100% after we receive the goods in good condition, with a process of 1x24 hours.",
     },
     {
       question: "Can I order another item before my rental period is over?",
@@ -56,7 +65,7 @@ const FAQ: React.FC = () => {
     {
       question: "Can I cancel my order?",
       answer:
-        "• Cancellation of rental less than 5 days will forfeit the rental fee.\n• Cancellation of rental less than 10 days will forfeit the deposit.\n• Change the rental date a maximum of H-3 days from the delivery schedule, otherwise it will be considered a cancellation of the rental schedule.",
+        " Cancellation of rental less than 5 days will forfeit the rental fee.\n Cancellation of rental less than 10 days will forfeit the deposit.\n Change the rental date a maximum of H-3 days from the delivery schedule, otherwise it will be considered a cancellation of the rental schedule.",
     },
     {
       question: "Do I have to pay for laundry?",
@@ -65,12 +74,12 @@ const FAQ: React.FC = () => {
     {
       question: "What will happen if I don't return the items on time?",
       answer:
-        "There will be a deduction of the deposit:\n• Found damage or stains that cannot be removed on the clothes.\n• Clothes returned are not in complete condition.\n• There is damage to the totebag or the totebag is lost.\n• Late return of goods (becomes extra days).\n• Late return and disrupts other rental schedules the deposit will be deducted 100%.\n• If there is severe damage and cannot be reused or the dress is lost, the customer is required to pay compensation of the price of the new dress.",
+        "There will be a deduction of the deposit:\n• Found damage or stains that cannot be removed on the clothes.\n Clothes returned are not in complete condition.\n There is damage to the totebag or the totebag is lost.\n Late return of goods (becomes extra days).\n Late return and disrupts other rental schedules the deposit will be deducted 100%.\n If there is severe damage and cannot be reused or the dress is lost, the customer is required to pay compensation of the price of the new dress.",
     },
     {
       question: "How to claim voucher?",
       answer:
-        "• The amount of the discount is adjusted to the dress rental price.\n• The discount is valid for 30 days after the voucher is given.\n• The discount is valid for the next order, when the initial order is complete. Multiples are not valid.\n• Discounts can be obtained for each rental, and are adjusted to the availability of vouchers.",
+        "The amount of the discount is adjusted to the dress rental price.\n The discount is valid for 30 days after the voucher is given.\n The discount is valid for the next order, when the initial order is complete. Multiples are not valid.\n Discounts can be obtained for each rental, and are adjusted to the availability of vouchers.",
     },
   ];
 
@@ -82,7 +91,10 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div id="faq" className="container max-w-full h-auto mt-[64px] md:mt-[128px] flex flex-col justify-center items-center mx-auto px-4">
+    <div
+      id="faq"
+      className="container max-w-full h-auto mt-[64px] md:mt-[128px] flex flex-col justify-center items-center mx-auto px-4"
+    >
       <div className="container w-full mx-auto text-center">
         <h1 className="text-macaronidark font-beautiqueMed text-4xl md:text-6xl md:mb-8 mb-4">
           FAQ Rentaloca
@@ -118,9 +130,20 @@ const FAQ: React.FC = () => {
               </svg>
             </div>
             {openIndex === index && (
-              <p className="mt-1 text-sm ml-2 mb-2 text-macaronidark">
-                {faq.answer}
-              </p>
+              <ul className="mt-1 ml-4 mb-2 list-disc text-sm text-macaronidark">
+                {faq.answer.split("\n").map((line, idx) => (
+                  <li key={idx} className="mb-1">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: line.replace(
+                          /<span class="font-bold">(.+?)<\/span>/g,
+                          `<span class="font-bold">$1</span>`
+                        ),
+                      }}
+                    />
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
         ))}
