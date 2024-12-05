@@ -140,6 +140,7 @@ const Catalogbaju = () => {
   const [sortedItems, setSortedItems] = useState(clothingItems);
   const [filterAvailable, setFilterAvailable] = useState<null | boolean>(null);
   const [priceRange, setPriceRange] = useState<number[]>([0, 2000000]); // Rentang harga default
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleFilter = (availability: boolean | null) => {
     setFilterAvailable(availability);
@@ -245,7 +246,7 @@ const Catalogbaju = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-center mt-6 space-x-2 mx-auto">
+        <div className="flex items-center justify-center mt-6 space-x-2">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
