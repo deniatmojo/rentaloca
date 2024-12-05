@@ -140,7 +140,7 @@ const Catalogbaju = () => {
   const [sortedItems, setSortedItems] = useState(clothingItems);
   const [filterAvailable, setFilterAvailable] = useState<null | boolean>(null);
   const [priceRange, setPriceRange] = useState<number[]>([0, 2000000]); // Rentang harga default
-  const [isOpen, setIsOpen] = useState(false);
+  const [isShortOpen, setIsShortOpen] = useState(false); // Menambahkan state untuk short by
 
   const handleFilter = (availability: boolean | null) => {
     setFilterAvailable(availability);
@@ -200,6 +200,11 @@ const Catalogbaju = () => {
     setCurrentPage(page);
   };
 
+  // Fungsi untuk toggle menu burger
+  const toggleShort = () => {
+    setIsShortOpen(!isShortOpen);
+  };
+
   return (
     <div className="container flex flex-wrap md:flex-nowrap md:justify-between relative w-full h-full md:mt-20 mt-10 mx-auto gap-5 md:px-10">
       {/* Sidebar Filter */}
@@ -209,28 +214,70 @@ const Catalogbaju = () => {
       />
 
       {/* Main Content */}
-      <div className="container w-full h-full mt-0 flex md:flex-col flex-wrap mb-16">
+      <div className="relative container mt-4 w-full h-full md:mt-0 flex md:flex-col flex-wrap mb-16">
         {/* Sort & Count */}
         <div className="flex w-full flex-row items-center justify-between px-8 md:mb-0 mb-4">
-          <div className="flex items-center">
-            <h1 className="text-macaronidark font-Inter text-sm mr-2">
-              Sort by:
-            </h1>
-            <select
-              onChange={(e) => handleSort(e.target.value)}
-              className="bg-white border-[1px] border-macaronidark3 rounded-md px-2 py-1 text-sm"
+          <div className="flex flex-row w-[180px] items-center">
+            <button
+              onClick={toggleShort}
+              aria-label="sort"
+              className="flex flex-row items-center space-x-2"
             >
-              <option value="name-asc">Name A-Z</option>
-              <option value="name-desc">Name Z-A</option>
-              <option value="price-low-high">Price Low-High</option>
-              <option value="price-high-low">Price High-Low</option>
-            </select>
+              <h1 className="text-macaronidark font-Inter text-sm">Sort by</h1>
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.3538 0.853754L6.35378 5.85375C6.30735 5.90024 6.2522 5.93712 6.1915 5.96228C6.13081 5.98745 6.06574 6.0004 6.00003 6.0004C5.93433 6.0004 5.86926 5.98745 5.80856 5.96228C5.74786 5.93712 5.69272 5.90024 5.64628 5.85375L0.646284 0.853754C0.552464 0.759933 0.499756 0.632685 0.499756 0.500003C0.499756 0.367321 0.552464 0.240073 0.646284 0.146253C0.740104 0.0524328 0.867352 -0.000274658 1.00003 -0.000274658C1.13272 -0.000274658 1.25996 0.0524328 1.35378 0.146253L6.00003 4.79313L10.6463 0.146253C10.6927 0.099798 10.7479 0.0629478 10.8086 0.0378065C10.8693 0.0126652 10.9343 -0.000274658 11 -0.000274658C11.0657 -0.000274658 11.1308 0.0126652 11.1915 0.0378065C11.2522 0.0629478 11.3073 0.099798 11.3538 0.146253C11.4002 0.192708 11.4371 0.247859 11.4622 0.308555C11.4874 0.369252 11.5003 0.434306 11.5003 0.500003C11.5003 0.565701 11.4874 0.630755 11.4622 0.691452C11.4371 0.752148 11.4002 0.807298 11.3538 0.853754Z"
+                  fill="#3D3322"
+                />
+              </svg>
+            </button>
           </div>
           <label className="bg-white text-macaronidark rounded-full px-1 py-1 text-xs border-[1px] border-macaronidark3">
             {filteredAndSortedItems.length} Product
             {filteredAndSortedItems.length !== 1 ? "s" : ""}
           </label>
         </div>
+
+        {/* Short by menu */}
+        {isShortOpen && (
+          <div className="absolute top-12 left-8 bg-macaronilight3 w-[160px] md:w-[180px] py-2 px-2 rounded-md shadow-md">
+            <div className="space-y-4">
+              <ul className="p-1 text-sm text-gray-700">
+                <li
+                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleSort("name-asc")}
+                >
+                  Name A-Z
+                </li>
+                <li
+                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleSort("name-desc")}
+                >
+                  Name Z-A
+                </li>
+                <li
+                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleSort("price-low-high")}
+                >
+                  Price Low-High
+                </li>
+                <li
+                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleSort("price-high-low")}
+                >
+                  Price High-Low
+                </li>
+                {/* Menu tambahan lainnya */}
+              </ul>
+            </div>
+          </div>
+        )}
 
         {/* Clothing Cards */}
         <div className="md:grid md:grid-cols-3 flex flex-wrap w-full px-9 md:px-0 mt-4 gap-4 md:justify-between justify-center">
@@ -246,7 +293,7 @@ const Catalogbaju = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-center mt-6 space-x-2">
+        <div className="flex items-center justify-center mt-6 space-x-2 mx-auto">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
