@@ -22,7 +22,10 @@ const bgheader = () => {
                 thousands of outfits (and still growing!).
               </p>
               <div className="md:ml-6 w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark mx-auto">
-                <a href="#" className="text-lg text-macaronidark2 shadow-sm">
+                <a
+                  href="/catalogue"
+                  className="text-lg text-macaronidark2 shadow-sm"
+                >
                   Get Started
                 </a>
               </div>

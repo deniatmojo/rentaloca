@@ -104,7 +104,7 @@ const FAQ: React.FC = () => {
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="container w-full h-auto border-b border-macaronidark"
+            className="container w-full h-auto border-b border-macaronidark pb-2 "
           >
             <div
               className="flex items-center justify-between h-[40px] cursor-pointer"
