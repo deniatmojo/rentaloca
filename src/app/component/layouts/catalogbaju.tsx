@@ -206,7 +206,7 @@ const Catalogbaju = () => {
   };
 
   return (
-    <div className="container flex flex-wrap md:flex-nowrap md:justify-between relative w-full h-full md:mt-20 mt-10 mx-auto gap-5 md:px-10">
+    <div className="container flex flex-wrap md:flex-nowrap md:justify-between relative w-full h-full md:-mt-20 -mt-16 md:pt-40 pt-[104px] mx-auto gap-5 md:px-10">
       {/* Sidebar Filter */}
       <FilterSection
         handleFilter={handleFilter}
@@ -250,25 +250,25 @@ const Catalogbaju = () => {
             <div className="space-y-4">
               <ul className="p-1 text-sm text-gray-700">
                 <li
-                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  className="py-1 px-1 hover:bg-gray-100 hover:rounded-md cursor-pointer"
                   onClick={() => handleSort("name-asc")}
                 >
                   Name A-Z
                 </li>
                 <li
-                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  className="py-1 px-1 hover:bg-gray-100 hover:rounded-md cursor-pointer"
                   onClick={() => handleSort("name-desc")}
                 >
                   Name Z-A
                 </li>
                 <li
-                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  className="py-1 px-1 hover:bg-gray-100 hover:rounded-md cursor-pointer"
                   onClick={() => handleSort("price-low-high")}
                 >
                   Price Low-High
                 </li>
                 <li
-                  className="py-1 hover:bg-gray-100 cursor-pointer"
+                  className="py-1 px-1 hover:bg-gray-100 hover:rounded-md cursor-pointer"
                   onClick={() => handleSort("price-high-low")}
                 >
                   Price High-Low
@@ -286,7 +286,7 @@ const Catalogbaju = () => {
               key={index}
               name={item.name}
               image={item.image}
-              price={item.price}
+              price={parseInt(item.price)}
               link={item.link}
             />
           ))}

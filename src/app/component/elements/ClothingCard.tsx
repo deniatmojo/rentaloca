@@ -1,13 +1,21 @@
 "use client";
 import React from "react";
+
 interface ClothingCardProps {
   name: string;
   image: string;
-  price: string;
+  price: number; // Ubah menjadi tipe number untuk mempermudah format
   link: string;
 }
 
 const ClothingCard = ({ name, image, price, link }: ClothingCardProps) => {
+  // Format harga ke format Indonesia
+  const formattedPrice = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 2,
+  }).format(price);
+
   return (
     <a href={link}>
       <div className="flex flex-col md:h-[481px] h-auto w-full">
@@ -19,7 +27,9 @@ const ClothingCard = ({ name, image, price, link }: ClothingCardProps) => {
         <h2 className="text-black font-beautiqueMed md:mt-1 mt-2 text-lg">
           {name}
         </h2>
-        <h3 className="text-black font-Inter mt-1 mb-2 text-sm">Rp. {price}</h3>
+        <h3 className="text-black font-Inter mt-1 mb-2 text-sm">
+          {formattedPrice}
+        </h3>
       </div>
     </a>
   );
