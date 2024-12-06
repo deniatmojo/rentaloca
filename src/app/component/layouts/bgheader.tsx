@@ -21,14 +21,16 @@ const bgheader = () => {
                 problems with borrowing clothes and will be able to access
                 thousands of outfits (and still growing!).
               </p>
-              <div className="md:ml-6 w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark mx-auto">
-                <a
-                  href="/catalogue"
-                  className="text-lg text-macaronidark2 shadow-sm"
-                >
-                  Get Started
-                </a>
-              </div>
+              <a href="/catalogue">
+                <div className="md:ml-6 w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark mx-auto">
+                  <a
+                    href="/catalogue"
+                    className="text-lg text-macaronidark2 shadow-sm"
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </a>
             </div>
 
             {/* Kolom Kanan */}
