@@ -3,12 +3,6 @@ import { useState, useEffect } from "react";
 import ClientPage from "./client";
 import { getSheetData } from "@/server/get-data";
 
-async function fetchProductData(slug: string) {
-    const response = await fetch("/data/product.json");
-    const products = await response.json();
-    return products.find((product: { slug: string }) => product.slug === slug);
-}
-
 export default function Page({ params }: { params: { slug: string } }) {
     const [product, setProduct] = useState<null | object>(null);
     const [loading, setLoading] = useState(true);

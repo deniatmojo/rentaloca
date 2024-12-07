@@ -92,12 +92,12 @@ const FilterSection: React.FC<FilterSectionProps> = ({
         </Box>
         <div className="flex justify-between mt-2 text-sm">
           <div className="md:w-[70px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark flex">
-            <span className="md:text-[11px] text-[12px]">
+            <span className="md:text-[11px] text-[12px] text-macaronidark">
               {priceRange[0].toLocaleString("id-ID")}
             </span>
           </div>
           <div className="md:w-[70px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark flex">
-            <span className="md:text-[11px] text-[12px]">
+            <span className="md:text-[11px] text-[12px] text-macaronidark">
               {priceRange[1].toLocaleString("id-ID")}
             </span>
           </div>

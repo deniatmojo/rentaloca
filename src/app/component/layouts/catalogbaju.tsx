@@ -1,146 +1,177 @@
+// @ts-nocheck
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ClothingCard from "../elements/ClothingCard";
 import FilterSection from "../fragments/filtersection"; // Import FilterSection
+import { getSheetData } from "@/server/get-data";
 
 const Catalogbaju = () => {
   const itemsPerPage = 6; // Jumlah item per halaman
   const [currentPage, setCurrentPage] = useState(1); // Halaman saat ini
-
-  const clothingItems = [
-    {
-      name: "Julia Set Nude Pink",
-      image: "/img/julia-nude-pink.jpg",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-nude-pink",
-    },
-    {
-      name: "Julia Set Cream",
-      image: "/img/julia-cream.jpg",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-cream",
-    },
-    {
-      name: "Julia Set Seige Green",
-      image: "/img/julia.png",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-green",
-    },
-    {
-      name: "Julia Set Black Nude Pink",
-      image: "/img/julia-black-nude-pink.jpg",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-black-nude-pink",
-    },
-    {
-      name: "Julia Set Blue",
-      image: "/img/julia-blue.jpg",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-blue",
-    },
-    {
-      name: "Julia Set Pink",
-      image: "/img/julia-pink.jpg",
-      price: "200000",
-      available: true,
-      link: "/detail-catalogue/julia-set-pink",
-    },
-    {
-      name: "Julia Set Seige Green Man",
-      image: "/img/julia-man-seige-green.jpg",
-      price: "200000",
-      available: true,
-      link: "/detail-catalogue/julia-set-nude-pink",
-    },
-    {
-      name: "Julia Set Black Nude Pink Man",
-      image: "/img/julia-man-black-nude-pink.jpg",
-      price: "180000",
-      available: true,
-      link: "/detail-catalogue/julia-set-nude-pink",
-    },
-    {
-      name: "Ayumi Dress Grey",
-      image: "/img/ayumi-grey.png",
-      price: "235000",
-      available: true,
-      link: "/detail-catalogue/ayumi-dress-grey",
-    },
-    {
-      name: "Finolla Dress Cream",
-      image: "/img/finola.png",
-      price: "245000",
-      available: true,
-      link: "/detail-catalogue/finolla-dress-cream",
-    },
-    {
-      name: "Kanawa Dress Black",
-      image: "/img/kanawa.png",
-      price: "265000",
-      available: true,
-      link: "/detail-catalogue/kanawa-dress-black",
-    },
-    {
-      name: "Festive Samalaya Dress Grey",
-      image: "/img/samalaya-grey.png",
-      price: "649000",
-      available: true,
-      link: "/detail-catalogue/festive-samalaya-dress-grey",
-    },
-    {
-      name: "Sasha Dress Green",
-      image: "/img/sasha.png",
-      price: "255000",
-      available: true,
-      link: "/detail-catalogue/sasha-dress-green",
-    },
-    {
-      name: "Kebaya Kenangan Nenek Black",
-      image: "/img/kebaya-kenangan-nenek/main.png",
-      price: "265000",
-      available: true,
-      link: "/detail-catalogue/kebaya-kenangan-nenek",
-    },
-    {
-      name: "Leona Dress Rose Gold",
-      image: "/img/leona-dress.jpeg",
-      price: "600000",
-      available: true,
-      link: "/detail-catalogue/leona-dress-rose-gold",
-    },
-    {
-      name: "Mera Dress Pink",
-      image: "/img/mera-dress.png",
-      price: "200000",
-      available: true,
-      link: "/detail-catalogue/mera-dress-pink",
-    },
-    {
-      name: "Bonita Dress Pink",
-      image: "/img/bonita.png",
-      price: "200000",
-      available: true,
-      link: "/detail-catalogue/bonita-dress-pink",
-    },
-    {
-      name: "Kirei Dress Grey",
-      image: "/img/kirei-dress-grey/main.png",
-      price: "235000",
-      available: false,
-      link: "/detail-catalogue/kirei-dress-grey",
-    },
-  ];
-
-  // State untuk menyimpan items yang diurutkan
-  const [sortedItems, setSortedItems] = useState(clothingItems);
+  const [clothingItems, setClothingItems] = useState([]);
+  const [sortedItems, setSortedItems] = useState([]);
   const [filterAvailable, setFilterAvailable] = useState<null | boolean>(null);
   const [priceRange, setPriceRange] = useState<number[]>([0, 2000000]); // Rentang harga default
   const [isShortOpen, setIsShortOpen] = useState(false); // Menambahkan state untuk short by
+
+  useEffect(() => {
+    async function getProduct() {
+      try {
+        const response = await getSheetData();
+        const data = response?.data;
+        const parsePrice = (price: string) => price ? parseInt(price.replace(/[^\d]/g, ""), 10) : null;
+        const result: { name: any; image: any; price: number | null; available: boolean; link: string; }[] = [];
+
+        data?.forEach(val => {
+          result.push({
+            name: val[1],
+            image: val[24]?.trim(),
+            price: parsePrice(val[19]),
+            available: parseInt(val[8], 10) !== 0,
+            link: `/detail-catalogue/${val[23]}`,
+          })
+        });
+
+        setClothingItems(result)
+        setSortedItems(result)
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    }
+
+    getProduct();
+  }, []);
+
+  // const clothingItems = [
+  //   {
+  //     name: "Julia Set Nude Pink",
+  //     image: "/img/julia-nude-pink.jpg",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-nude-pink",
+  //   },
+  //   {
+  //     name: "Julia Set Cream",
+  //     image: "/img/julia-cream.jpg",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-cream",
+  //   },
+  //   {
+  //     name: "Julia Set Seige Green",
+  //     image: "/img/julia.png",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-green",
+  //   },
+  //   {
+  //     name: "Julia Set Black Nude Pink",
+  //     image: "/img/julia-black-nude-pink.jpg",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-black-nude-pink",
+  //   },
+  //   {
+  //     name: "Julia Set Blue",
+  //     image: "/img/julia-blue.jpg",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-blue",
+  //   },
+  //   {
+  //     name: "Julia Set Pink",
+  //     image: "/img/julia-pink.jpg",
+  //     price: "200000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-pink",
+  //   },
+  //   {
+  //     name: "Julia Set Seige Green Man",
+  //     image: "/img/julia-man-seige-green.jpg",
+  //     price: "200000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-nude-pink",
+  //   },
+  //   {
+  //     name: "Julia Set Black Nude Pink Man",
+  //     image: "/img/julia-man-black-nude-pink.jpg",
+  //     price: "180000",
+  //     available: true,
+  //     link: "/detail-catalogue/julia-set-nude-pink",
+  //   },
+  //   {
+  //     name: "Ayumi Dress Grey",
+  //     image: "/img/ayumi-grey.png",
+  //     price: "235000",
+  //     available: true,
+  //     link: "/detail-catalogue/ayumi-dress-grey",
+  //   },
+  //   {
+  //     name: "Finolla Dress Cream",
+  //     image: "/img/finola.png",
+  //     price: "245000",
+  //     available: true,
+  //     link: "/detail-catalogue/finolla-dress-cream",
+  //   },
+  //   {
+  //     name: "Kanawa Dress Black",
+  //     image: "/img/kanawa.png",
+  //     price: "265000",
+  //     available: true,
+  //     link: "/detail-catalogue/kanawa-dress-black",
+  //   },
+  //   {
+  //     name: "Festive Samalaya Dress Grey",
+  //     image: "/img/samalaya-grey.png",
+  //     price: "649000",
+  //     available: true,
+  //     link: "/detail-catalogue/festive-samalaya-dress-grey",
+  //   },
+  //   {
+  //     name: "Sasha Dress Green",
+  //     image: "/img/sasha.png",
+  //     price: "255000",
+  //     available: true,
+  //     link: "/detail-catalogue/sasha-dress-green",
+  //   },
+  //   {
+  //     name: "Kebaya Kenangan Nenek Black",
+  //     image: "/img/kebaya-kenangan-nenek/main.png",
+  //     price: "265000",
+  //     available: true,
+  //     link: "/detail-catalogue/kebaya-kenangan-nenek",
+  //   },
+  //   {
+  //     name: "Leona Dress Rose Gold",
+  //     image: "/img/leona-dress.jpeg",
+  //     price: "600000",
+  //     available: true,
+  //     link: "/detail-catalogue/leona-dress-rose-gold",
+  //   },
+  //   {
+  //     name: "Mera Dress Pink",
+  //     image: "/img/mera-dress.png",
+  //     price: "200000",
+  //     available: true,
+  //     link: "/detail-catalogue/mera-dress-pink",
+  //   },
+  //   {
+  //     name: "Bonita Dress Pink",
+  //     image: "/img/bonita.png",
+  //     price: "200000",
+  //     available: true,
+  //     link: "/detail-catalogue/bonita-dress-pink",
+  //   },
+  //   {
+  //     name: "Kirei Dress Grey",
+  //     image: "/img/kirei-dress-grey/main.png",
+  //     price: "235000",
+  //     available: false,
+  //     link: "/detail-catalogue/kirei-dress-grey",
+  //   },
+  // ];
+
+  // State untuk menyimpan items yang diurutkan
 
   const handleFilter = (availability: boolean | null) => {
     setFilterAvailable(availability);
@@ -297,11 +328,10 @@ const Catalogbaju = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
-              className={`px-4 py-2 border rounded-md ${
-                currentPage === index + 1
-                  ? "bg-macaronidark text-white"
-                  : "bg-white text-macaronidark"
-              }`}
+              className={`px-4 py-2 border rounded-md ${currentPage === index + 1
+                ? "bg-macaronidark text-white"
+                : "bg-white text-macaronidark"
+                }`}
               onClick={() => changePage(index + 1)}
             >
               {index + 1}
