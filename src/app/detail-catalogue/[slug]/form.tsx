@@ -7,7 +7,8 @@ export default function FormCatalogue({ data }: { data: any }) {
 
     const { dispatch } = useCart();
 
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(1);
+    const [selectedSize, setSelectedSize] = useState(data.size[0] ?? '');
 
     const handleAddToCart = () => {
         dispatch({
@@ -15,7 +16,7 @@ export default function FormCatalogue({ data }: { data: any }) {
             payload: {
                 id: data.id,
                 name: data.name,
-                size: data.size,
+                size: selectedSize,
                 retail_price: data.retail_price,
                 rental: data.rental,
                 quantity: quantity,
@@ -24,7 +25,7 @@ export default function FormCatalogue({ data }: { data: any }) {
             },
         });
     };
-    
+
     const toggleCart = () => {
         dispatch({ type: "TOGGLE_CART" });
     }
@@ -32,6 +33,8 @@ export default function FormCatalogue({ data }: { data: any }) {
     const toggleRent = () => {
         dispatch({ type: "TOGGLE_RENT" });
     }
+    
+    const sizes = ["S", "M", "L", "XL"];
 
     return (
         <>
@@ -43,27 +46,47 @@ export default function FormCatalogue({ data }: { data: any }) {
             <div>
                 <h6 className="text-[18px] font-medium mb-2">Size</h6>
                 <div className="flex gap-x-[16px] flex-wrap gap-y-2">
-                    <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'S' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>S</button>
-                    <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'M' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>M</button>
-                    <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'L' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>L</button>
-                    <button className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] ${data.size === 'XL' ? 'bg-macaronidark text-white' : 'text-macaronidark'}`}>XL</button>
+                    {sizes.map((size) => (
+                        <button 
+                            key={size} 
+                            disabled={!data.size.includes(size)}
+                            onClick={() => setSelectedSize(size)} 
+                            className={`px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-[7px] lg:rounded-[14px] 
+                                ${selectedSize === size ? 'bg-macaronidark text-white' : 'text-macaronidark'}
+                                ${!data.size.includes(size) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        >
+                            {size}
+                        </button>
+                    ))}
                 </div>
             </div>
 
-            <div>
-                <h6 className="text-[18px] font-medium mb-2">Quantity</h6>
-                <select onChange={(e) => setQuantity(parseInt(e.target.value))} value={quantity} className="px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-md appearance-none">
-                    {Array.from({ length: data.quantity }, (_, index) => (
-                        <option key={index + 1} value={index + 1}>
-                            {index + 1}
-                        </option>
-                    ))}
-                </select>
-            </div>
+            {data.quantity == 0 ? (
+                <>
+                    <div>
+                        <h6 className="text-[18px] font-medium mb-2">Quantity</h6>
+                        <select value={0} className="px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-md appearance-none">
+                            <option value={0}>0</option>
+                        </select>
+                    </div>
+                    <div className="text-red-500">Mohon maaf, stok habis.</div>
+                </>
+            ) : (
+                <div>
+                    <h6 className="text-[18px] font-medium mb-2">Quantity</h6>
+                    <select onChange={(e) => setQuantity(parseInt(e.target.value))} value={quantity} className="px-[16px] lg:px-[30px] py-[12px] lg:py-[24px] border border-macaronidark rounded-md appearance-none">
+                        {Array.from({ length: data.quantity }, (_, index) => (
+                            <option key={index + 1} value={index + 1}>
+                                {index + 1}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            )}
 
             <div className="w-full flex gap-5">
-                <button onClick={() =>  {handleAddToCart(); toggleCart()}} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronilight">Add To Cart</button>
-                <button onClick={() => {toggleRent(); handleAddToCart()}} className="px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronidark3 bg-macaronidark text-white">Rent It Now</button>
+                <button disabled={data.quantity == 0} onClick={() =>  {handleAddToCart(); toggleCart()}} className={`${data.quantity == 0 ? 'cursor-not-allowed opacity-50' : ''} px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronilight`}>Add To Cart</button>
+                <button disabled={data.quantity == 0} onClick={() => {toggleRent(); handleAddToCart()}} className={`${data.quantity == 0 ? 'cursor-not-allowed opacity-50' : ''} px-6 text-[16px] lg:text-[24px] flex-1 py-5 border border-macaronidark rounded-[14px] hover:bg-macaronidark3 bg-macaronidark text-white`}>Rent It Now</button>
             </div>
 
             <div className="text-[14px] bg-macaronilight2/60 text-macaronidark border border-macaronidark px-[24px] py-[12px] rounded-[10px]">

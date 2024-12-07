@@ -28,12 +28,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                     },
                     size: (() => {
                         const sizeMap: any = { 3: "S", 4: "M", 5: "L", 6: "XL", 7: "S" };
+                        const sizes: string[] = [];
                         for (let i = 3; i <= 7; i++) {
                             if (data[i]?.trim() === "X") {
-                                return sizeMap[i];
+                                sizes.push(sizeMap[i]);
                             }
                         }
-                        return null;
+                        return sizes;
                     })(),
                     quantity: parseInt(data[8], 10),
                     bust: checkValue(data[9]),
@@ -50,6 +51,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     discount: parsePrice(data[20]),
                     note: data[21]?.trim(),
                 };
+                console.log(result)
                 setProduct(result);
             } catch (error) {
                 console.error("Error fetching product data:", error);
