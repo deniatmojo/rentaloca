@@ -127,15 +127,7 @@ export default function Checkout() {
     };
 
     fetchProvinces();
-  }, []);
-
-  useEffect(() => {
-    if (provinces !== '31') {
-      setShippingMethod('expedisi')
-    } else {
-      setShippingMethod('instant')
-    }
-  }, [provinces])
+  }, [])
 
   const [isStateLoaded, setIsStateLoaded] = useState(false);
 
@@ -231,9 +223,9 @@ export default function Checkout() {
                   Bank Deposit
                 </label>
                 <div className="bg-gray-100 p-5 rounded-md border border-gray-300 text-gray-500">
-                  <p>BCA</p>
-                  <p>PT Rentaloca</p>
-                  <p>000000000000</p>
+                  <p>BANK BJB</p>
+                  <p>a.n PT Rentaloca Teknologi Indonesia</p>
+                  <p>0144811372001</p>
                 </div>
               </div>
               <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Delivery Address</h1>
@@ -302,19 +294,28 @@ export default function Checkout() {
                   ))}
                 </select>
               </div>
-              <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
-              <div className="flex flex-col lg:flex-row justify-between gap-5 text-macaronidark mt-5">
-                <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
-                  <div className="font-bold text-md lg:text-xl">Paxel</div>
-                  <div className="text-sm">(Instant Jabodetabek Only)</div>
+              { provinces !== "31" && provinces !== "32" ? (
+                <div className="mt-10 text-red-600">
+                  <div className="font-bold">Shipping Unavailable </div>
+                  <div>We&rsquo;re sorry, but shipping is not available for your location at the moment.</div>
                 </div>
-                <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
-                  <div className="font-bold text-md lg:text-xl">Gojek / Grab</div>
-                  <div className="text-sm">(Jakarta Only)</div>
-                </div>
-              </div>
+              ) : (
+                <>
+                  <h1 className="text-macaronidark font-beautiqueMed text-[24px] lg:text-[32px] mt-14">Shipping Method</h1>
+                  <div className="flex flex-col lg:flex-row justify-between gap-5 text-macaronidark mt-5">
+                    <div onClick={() => setShippingMethod('paxel')} className={`${shippingMethod === 'paxel' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
+                      <div className="font-bold text-md lg:text-xl">Paxel</div>
+                      <div className="text-sm">(Instant Jabodetabek Only)</div>
+                    </div>
+                    <div onClick={() => setShippingMethod('instant')} className={`${shippingMethod === 'instant' ? 'bg-macaronilight3' : ''} rounded-md border border-[#9A9A9A] w-full p-4 hover:bg-macaronilight3 cursor-pointer`}>
+                      <div className="font-bold text-md lg:text-xl">Gojek / Grab</div>
+                      <div className="text-sm">(Jakarta Only)</div>
+                    </div>
+                  </div>
+                </>
+              )}
               <div className="mt-10">
-                <button type="submit" disabled={isSubmitting} className="bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
+                <button type="submit" disabled={isSubmitting || (provinces !== "31" && provinces !== "32")} className="disabled:cursor-not-allowed disabled:opacity-50 bg-macaronidark text-white w-full rounded-lg py-5">{isSubmitting ? 'Sending...' : 'Complete Order'}</button>
               </div>
             </div>
           </form>
