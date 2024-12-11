@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Inter } from 'next/font/google'
 import FormCatalogue from "./form"
 import Also from "./also"
-import RentModal from "../../component/rent-modal"
+// import RentModal from "../../component/rent-modal"
 // @ts-ignore
 import ReactImageMagnify from 'react-image-magnify';
 import './form.css'
@@ -91,7 +91,7 @@ export default function ClientPage({
                     />
                 </div>
             </div>
-            <RentModal/>
+            {/* <RentModal/> */}
             <Also 
                 data={params}
             />

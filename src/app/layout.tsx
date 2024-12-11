@@ -5,6 +5,7 @@ import Navbar from "./component/layouts/navbar";
 import Footer from "./component/layouts/footer";
 import Cart from "./component/cart";
 import { CartProvider } from "@/context/CartContext";
+import RentModal from "./component/rent-modal";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,6 +51,7 @@ export default function RootLayout({
         >
           <Navbar />
           <Cart />
+          <RentModal />
           <main className="flex-1">{children}</main>
           <Footer />
         </body>

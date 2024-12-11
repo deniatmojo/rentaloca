@@ -46,12 +46,7 @@ export default function Cart() {
 
     const handleCheckout = () => {
         toggleCart();
-
-        if (!state.startDate || !state.endDate) {
-            dispatch({ type: "TOGGLE_RENT" });
-        } else {
-            router.push('/checkout');
-        }
+        dispatch({ type: "TOGGLE_RENT" });
     };
 
     return (
