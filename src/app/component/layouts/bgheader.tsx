@@ -2,41 +2,38 @@ const bgheader = () => {
   return (
     <div className="container bg-white -mt-[80px] h-auto max-w-full mx-auto">
       <div
-        className="h-full w-full bg-cover flex items-center justify-center relative"
+        className="md:h-[692px] h-full w-full bg-cover flex items-center justify-center relative"
         style={{ backgroundImage: "url('/img/bgheader.png')" }}
       >
         {/* Container Utama */}
-        <div className="container justify-between h-auto max-w-7xl bg-transparent px-5 sm:px-10">
-          <div className="flex flex-col mt-20 ml-4 md:ml-0 md:flex-row justify-between items-center h-auto md:mt-0">
+        <div className="container justify-between h-auto w-full bg-transparent px-10 md:px-4">
+          <div className="flex flex-col mt-20 ml-0 md:flex-row w-full justify-between items-center h-auto md:mt-0">
             {/* Kolom Kiri */}
             <div className="w-full md:w-[616px] mt-5 md:mt-20 flex flex-col items-start">
-              <h1 className="text-4xl text-center md:text-left md:text-6xl font-bold font-beautiqueMed text-macaronidark leading-tight mx-auto">
+              <h1 className="text-[30px] text-center md:text-left md:text-6xl font-bold font-beautiqueMed text-macaronidark leading-tight mx-auto">
                 Experience the Best <br /> of Indonesia Local <br /> Brands on
                 Rent
               </h1>
-              <p className="md:ml-6 mt-5 text-sm text-center md:text-lg text-macaronidark w-full md:w-[522px] md:text-left">
+              <p className="md:ml-6 mt-5 text-[10px] text-center md:text-lg text-macaronidark w-full md:w-[522px] md:text-left">
                 Rentaloca Indonesia is a technology and a revolutionary business
                 model the fashion authority into the hands of our users and
                 offers them a platform for exchange that addresses all of the
                 problems with borrowing clothes and will be able to access
                 thousands of outfits (and still growing!).
               </p>
-              <a href="/catalogue">
-                <div className="md:ml-6 w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark mx-auto">
-                  <a
-                    href="/catalogue"
-                    className="text-lg text-macaronidark2 shadow-sm"
-                  >
-                    Get Started
-                  </a>
-                </div>
+              <a
+                href="/catalogue"
+                className="md:ml-6 w-[148px] h-[47px] gap-[10px] px-6 py-2.5 rounded-lg mt-5 bg-macaronidark mx-auto flex items-center justify-center"
+              >
+                <span className="text-lg text-macaronidark2 shadow-sm">
+                  Get Started
+                </span>
               </a>
             </div>
-
             {/* Kolom Kanan */}
             <div
-              className="w-[350px] md:w-[483px] h-[500px] md:h-[630px] bg-cover -mt-12 md:mt-20"
-              style={{ backgroundImage: "url('/img/home1.png')" }}
+              className="w-[350px] md:w-[619px] h-[300px] md:h-[550px] bg-contain bg-no-repeat mt-8 md:mt-36 z-0 md:ml-0 ml-5"
+              style={{ backgroundImage: "url('/img/bg3.png')" }}
             ></div>
           </div>
         </div>
