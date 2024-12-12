@@ -15,6 +15,8 @@ const FilterSection: React.FC<FilterSectionProps> = ({
   const [priceRange, setPriceRange] = useState<number[]>([0, 900000]); // Rentang harga default
   const [isAvailabilityOpen, setIsAvailabilityOpen] = useState(false); // Toggle untuk filter Availability
   const [isPriceOpen, setIsPriceOpen] = useState(false); // Toggle untuk filter Harga
+  const [tempMin, setTempMin] = useState(priceRange[0].toString());
+  const [tempMax, setTempMax] = useState(priceRange[1].toString());
 
   // Fungsi toggle untuk membuka/menutup filter Availability
   const toggleAvailability = () => {
@@ -26,13 +28,6 @@ const FilterSection: React.FC<FilterSectionProps> = ({
     setIsPriceOpen(!isPriceOpen);
   };
 
-  const handlePriceChange = (event: Event, newValue: number | number[]) => {
-    setPriceRange(newValue as number[]);
-    handlePriceRange(newValue as number[]);
-  };
-
-  const [tempMin, setTempMin] = useState(priceRange[0].toString());
-  const [tempMax, setTempMax] = useState(priceRange[1].toString());
   const formatToRupiah = (value: string | number): string => {
     const num = Number(value);
     return `Rp ${num.toLocaleString("id-ID")}`;
@@ -78,7 +73,13 @@ const FilterSection: React.FC<FilterSectionProps> = ({
             <input
               type="checkbox"
               className="hidden peer"
-              onChange={() => handleFilter(true)}
+              onChange={(e) => {
+                if (!e.target.checked) {
+                  handleFilter(null); // Default, tampilkan semua produk
+                } else {
+                  handleFilter(true); // Tampilkan produk available
+                }
+              }}
             />
             <div className="w-5 h-5 rounded-full border-2 border-macaronidark peer-checked:bg-macaronidark3 peer-checked:border-macaronidark transition"></div>
             <span className="text-macaronidark text-sm">Available</span>
@@ -87,7 +88,13 @@ const FilterSection: React.FC<FilterSectionProps> = ({
             <input
               type="checkbox"
               className="hidden peer"
-              onChange={() => handleFilter(false)}
+              onChange={(e) => {
+                if (!e.target.checked) {
+                  handleFilter(null); // Default, tampilkan semua produk
+                } else {
+                  handleFilter(false); // Tampilkan produk unavailable
+                }
+              }}
             />
             <div className="w-5 h-5 rounded-full border-2 border-macaronidark peer-checked:bg-macaronidark3 peer-checked:border-macaronidark transition"></div>
             <span className="text-macaronidark text-sm">Unavailable</span>
@@ -146,7 +153,12 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               <Slider
                 getAriaLabel={() => "Price range"}
                 value={priceRange}
-                onChange={handlePriceChange}
+                onChange={(e, newValue) => {
+                  setPriceRange(newValue as number[]);
+                  setTempMin((newValue as number[])[0].toString());
+                  setTempMax((newValue as number[])[1].toString());
+                  handlePriceRange(newValue as number[]);
+                }}
                 valueLabelDisplay="auto"
                 min={0}
                 max={900000}
@@ -164,8 +176,8 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 }}
                 onBlur={() => {
                   const value = Math.min(
-                    parseFromRupiah(tempMin),
-                    priceRange[1]
+                    Math.max(parseFromRupiah(tempMin), 0), // Minimum value is 0
+                    priceRange[1] // Do not exceed max
                   );
                   setPriceRange([value, priceRange[1]]);
                   handlePriceRange([value, priceRange[1]]);
@@ -183,8 +195,8 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 }}
                 onBlur={() => {
                   const value = Math.max(
-                    parseFromRupiah(tempMax),
-                    priceRange[0]
+                    Math.min(parseFromRupiah(tempMax), 900000), // Maximum value is 900000
+                    priceRange[0] // Do not go below min
                   );
                   setPriceRange([priceRange[0], value]);
                   handlePriceRange([priceRange[0], value]);
@@ -193,7 +205,6 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 className="md:w-[80px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark text-center text-macaronidark md:text-[11px] text-[12px] input-no-spinner"
               />
             </div>
-
             <style jsx>{`
               /* Hilangkan spinner di semua browser */
               .input-no-spinner::-webkit-inner-spin-button,
