@@ -11,26 +11,50 @@ const featuredon = () => {
       {/* Kontainer Gambar */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-[30px] w-full mt-[32px] md:mt-[48px] justify-center">
         <img
-          className="h-[225px] w-[225px] object-cover mx-auto"
-          src="/img/featuredon1.jpg"
+          className="h-[225px] w-[225px] rounded-full object-contain mx-auto"
+          src="/img/IMG_2440.png"
           alt="Featured Image 1"
           loading="lazy"
         />
         <img
-          className="h-[225px] w-[225px] object-cover mx-auto"
-          src="/img/featuredon2.png"
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2441.JPG"
           alt="Featured Image 2"
           loading="lazy"
         />
         <img
-          className="h-[225px] w-[225px] object-cover mx-auto"
-          src="/img/featuredon3.png"
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2442.PNG"
           alt="Featured Image 3"
           loading="lazy"
         />
         <img
-          className="h-[225px] w-[225px] object-auto mx-auto"
-          src="/img/featuredon4.png"
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2443.JPG"
+          alt="Featured Image 4"
+          loading="lazy"
+        />
+        <img
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2444.JPG"
+          alt="Featured Image 4"
+          loading="lazy"
+        />
+        <img
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2445.PNG"
+          alt="Featured Image 4"
+          loading="lazy"
+        />
+        <img
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2446.PNG"
+          alt="Featured Image 4"
+          loading="lazy"
+        />
+        <img
+          className="h-[225px] w-[225px] object-contain mx-auto"
+          src="/img/IMG_2447.PNG"
           alt="Featured Image 4"
           loading="lazy"
         />
