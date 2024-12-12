@@ -10,62 +10,65 @@ const Wardobe = () => {
             {/* Card 1 */}
             <a href="/detail-catalogue/kanawa-dress-black">
               <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center p-[14px] bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-                <div
-                  className="w-full h-[432px] bg-cover rounded-lg"
-                  style={{
-                    backgroundImage: "url('/img/kanawa.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                ></div>
+                <div className="w-full h-[432px] overflow-hidden rounded-lg">
+                  <img
+                    src="/img/kanawa.png"
+                    alt="Kanawa Dress Black"
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
                 <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Kanawa Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Black</h3>
               </div>
             </a>
+
             <a href="/detail-catalogue/sasha-dress-green">
               <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-                <div
-                  className="w-full h-[432px] bg-cover rounded-lg"
-                  style={{
-                    backgroundImage: "url('/img/sasha.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                ></div>
+                <div className="w-full h-[432px] overflow-hidden rounded-lg">
+                  <img
+                    src="/img/sasha.png"
+                    alt="Sasha Dress Green"
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
                 <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Sasha Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Green</h3>
               </div>
             </a>
+
             <a href="/detail-catalogue/bonita-dress-pink">
               <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-                <div
-                  className="w-full h-[432px] bg-cover rounded-lg"
-                  style={{
-                    backgroundImage: "url('/img/bonita.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                ></div>
+                <div className="w-full h-[432px] overflow-hidden rounded-lg">
+                  <img
+                    src="/img/bonita.png"
+                    alt="Bonita Dress Pink"
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
                 <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Bonita Dress
                 </h2>
                 <h3 className="text-black mt-1 text-sm">Pink</h3>
               </div>
             </a>
+
             <a href="/detail-catalogue/leona-dress-rose-gold">
               <div className="w-[333px] h-full md:w-[304px] md:h-[493px] flex flex-col items-center px-4 py-4 bg-white border-black border-[1px] shadow-md overflow-hidden rounded-lg">
-                <div
-                  className="w-full h-[432px] bg-cover rounded-lg"
-                  style={{
-                    backgroundImage: "url('/img/leona.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                ></div>
+                <div className="w-full h-[432px] overflow-hidden rounded-lg">
+                  <img
+                    src="/img/leona.png"
+                    alt="Leona Dress Wine Gold"
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
                 <h2 className="text-black mt-2 font-beautiqueMed text-lg">
                   Leona Dress
                 </h2>

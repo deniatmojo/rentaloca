@@ -8,6 +8,7 @@ const demand = () => {
         className="w-full md:w-1/2 h-[476px] rounded-lg object-cover object-top shadow-md"
         src="/img/demand.jpg"
         alt="Demand"
+        loading="lazy"
       />
 
       {/* Konten */}

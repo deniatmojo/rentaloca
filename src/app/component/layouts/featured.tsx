@@ -17,6 +17,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/hegiana.png"
             alt="Designer 1"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -24,6 +25,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/emmy.png"
             alt="Designer 2"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -31,6 +33,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/djahet.png"
             alt="Designer 3"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -38,6 +41,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/featuredon1.jpg"
             alt="Designer 4"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -45,6 +49,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/featuredon2.png"
             alt="Designer 5"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -52,6 +57,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-cover rounded-lg"
             src="/img/featuredon3.png"
             alt="Designer 6"
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -59,6 +65,7 @@ const Featured = () => {
             className="w-[135px] h-[135px] md:w-[135px] md:h-[135px] object-auto rounded-lg"
             src="/img/featuredon4.png"
             alt="Designer 7"
+            loading="lazy"
           />
         </div>
       </div>

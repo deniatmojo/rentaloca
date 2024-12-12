@@ -17,8 +17,9 @@ const Lorem = () => {
               className="absolute top-0 w-full h-[300px] object-cover"
               src="/img/larom1.jpg"
               alt="Cleanliness Guaranteed"
+              loading="lazy"
             />
-            <div className="absolute bottom-3 md:mt-3 px-5">
+            <div className="absolute top-[330px] px-5">
               <h1 className="font-bold font-beautiqueBlack text-lg lg:text-xl text-macaronidark mb-2">
                 Cleanliness Guaranteed
               </h1>
@@ -38,8 +39,9 @@ const Lorem = () => {
               className="absolute top-0 w-full h-[300px] object-cover"
               src="/img/home5.png"
               alt="Next Day Delivery"
+              loading="lazy"
             />
-            <div className="absolute bottom-3 px-5">
+            <div className="absolute top-[330px] px-5">
               <h1 className="font-bold font-beautiqueBlack text-lg lg:text-xl text-macaronidark mb-2">
                 Next Day Delivery
               </h1>

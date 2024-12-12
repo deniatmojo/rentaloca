@@ -14,21 +14,25 @@ const featuredon = () => {
           className="h-[225px] w-[225px] object-cover mx-auto"
           src="/img/featuredon1.jpg"
           alt="Featured Image 1"
+          loading="lazy"
         />
         <img
           className="h-[225px] w-[225px] object-cover mx-auto"
           src="/img/featuredon2.png"
           alt="Featured Image 2"
+          loading="lazy"
         />
         <img
           className="h-[225px] w-[225px] object-cover mx-auto"
           src="/img/featuredon3.png"
           alt="Featured Image 3"
+          loading="lazy"
         />
         <img
           className="h-[225px] w-[225px] object-auto mx-auto"
           src="/img/featuredon4.png"
           alt="Featured Image 4"
+          loading="lazy"
         />
       </div>
     </div>

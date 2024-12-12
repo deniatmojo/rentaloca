@@ -10,10 +10,13 @@ const howitwork = () => {
         {/* Kontainer Utama */}
         <div className="flex flex-col items-center justify-between sm:flex-row w-full h-full md:h-[300px] mx-auto px-4 rounded-sm md:mt-[48px] mt-[32px] gap-4 md:gap-[10px]">
           {/* Box 1 */}
-          <div
-            className="w-full h-[241px] md:h-full bg-cover bg-center rounded-lg overflow-hidden relative shadow-md"
-            style={{ backgroundImage: "url('/img/home2.png')" }}
-          >
+          <div className="w-full h-[241px] md:h-full rounded-lg overflow-hidden relative shadow-md">
+            <img
+              src="/img/home2.png"
+              alt="Background Home 2"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-macaronidark3 to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
               <h2 className="text-black font-bold text-lg sm:text-xl">RENT</h2>
               <h3 className="text-black text-sm sm:text-base">
@@ -23,10 +26,13 @@ const howitwork = () => {
           </div>
 
           {/* Box 2 */}
-          <div
-            className="w-full h-[241px] md:h-full bg-cover bg-center rounded-lg overflow-hidden relative shadow-md"
-            style={{ backgroundImage: "url('/img/home3.jpeg')" }}
-          >
+          <div className="w-full h-[241px] md:h-full rounded-lg overflow-hidden relative shadow-md">
+            <img
+              src="/img/home3.jpeg"
+              alt="Background Home 3"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-transparent to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
               <h2 className="text-black font-bold text-lg sm:text-xl">WEAR</h2>
               <h3 className="text-black text-sm sm:text-base">
@@ -36,10 +42,13 @@ const howitwork = () => {
           </div>
 
           {/* Box 3 */}
-          <div
-            className="w-full h-[241px] md:h-full bg-cover bg-center rounded-lg overflow-hidden relative shadow-md"
-            style={{ backgroundImage: "url('/img/home4.png')" }}
-          >
+          <div className="w-full h-[241px] md:h-full rounded-lg overflow-hidden relative shadow-md">
+            <img
+              src="/img/home4.png"
+              alt="Background Home 4"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-b from-transparent to-macaronilight2 opacity-70 flex flex-col justify-end p-4 text-left">
               <h2 className="text-black font-bold text-lg sm:text-xl">
                 REPEAT
