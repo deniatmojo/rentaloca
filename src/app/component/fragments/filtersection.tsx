@@ -31,6 +31,17 @@ const FilterSection: React.FC<FilterSectionProps> = ({
     handlePriceRange(newValue as number[]);
   };
 
+  const [tempMin, setTempMin] = useState(priceRange[0].toString());
+  const [tempMax, setTempMax] = useState(priceRange[1].toString());
+  const formatToRupiah = (value: string | number): string => {
+    const num = Number(value);
+    return `Rp ${num.toLocaleString("id-ID")}`;
+  };
+
+  const parseFromRupiah = (value: string): number => {
+    return Number(value.replace(/[^\d]/g, "")) || 0;
+  };
+
   return (
     <div className="container md:w-[185px] md:h-auto w-full h-full md:px-0 px-8">
       <h1 className="text-macaronidark font-Inter w-full text-2xl md:mb-8 mb-4 border-b-2 border-macaronidark">
@@ -139,21 +150,62 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 valueLabelDisplay="auto"
                 min={0}
                 max={900000}
-                step={50000}
+                step={10000}
               />
             </Box>
-            <div className="flex justify-between mt-2 text-sm">
-              <div className="md:w-[70px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark flex">
-                <span className="md:text-[11px] text-[12px] text-macaronidark">
-                  {priceRange[0].toLocaleString("id-ID")}
-                </span>
-              </div>
-              <div className="md:w-[70px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark flex">
-                <span className="md:text-[11px] text-[12px] text-macaronidark">
-                  {priceRange[1].toLocaleString("id-ID")}
-                </span>
-              </div>
+            <div className="flex justify-between mt-2 text-sm md:gap-2">
+              {/* Input untuk nilai minimum */}
+              <input
+                type="text"
+                value={formatToRupiah(tempMin)}
+                onChange={(e) => {
+                  const numericValue = parseFromRupiah(e.target.value);
+                  setTempMin(numericValue.toString());
+                }}
+                onBlur={() => {
+                  const value = Math.min(
+                    parseFromRupiah(tempMin),
+                    priceRange[1]
+                  );
+                  setPriceRange([value, priceRange[1]]);
+                  handlePriceRange([value, priceRange[1]]);
+                  setTempMin(value.toString());
+                }}
+                className="md:w-[80px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark text-center text-macaronidark md:text-[11px] text-[12px] input-no-spinner"
+              />
+              {/* Input untuk nilai maksimum */}
+              <input
+                type="text"
+                value={formatToRupiah(tempMax)}
+                onChange={(e) => {
+                  const numericValue = parseFromRupiah(e.target.value);
+                  setTempMax(numericValue.toString());
+                }}
+                onBlur={() => {
+                  const value = Math.max(
+                    parseFromRupiah(tempMax),
+                    priceRange[0]
+                  );
+                  setPriceRange([priceRange[0], value]);
+                  handlePriceRange([priceRange[0], value]);
+                  setTempMax(value.toString());
+                }}
+                className="md:w-[80px] w-[90px] h-[24px] rounded-full md:border-1.5 border-2 justify-center items-center border-macaronidark text-center text-macaronidark md:text-[11px] text-[12px] input-no-spinner"
+              />
             </div>
+
+            <style jsx>{`
+              /* Hilangkan spinner di semua browser */
+              .input-no-spinner::-webkit-inner-spin-button,
+              .input-no-spinner::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              .input-no-spinner {
+                -moz-appearance: textfield; /* Hilangkan spinner untuk Firefox */
+                appearance: textfield; /* Kompatibilitas untuk browser lainnya */
+              }
+            `}</style>
           </div>
         )}
       </div>
