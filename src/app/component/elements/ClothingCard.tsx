@@ -23,6 +23,7 @@ const ClothingCard = ({ name, image, price, link }: ClothingCardProps) => {
           className="md:w-[333px] md:h-[405px] w-[333px] h-[460px] md:rounded-md rounded-xl object-cover"
           src={image}
           alt={name}
+          loading="lazy"
         />
         <h2 className="text-black font-beautiqueMed md:mt-1 mt-2 text-lg">
           {name}
